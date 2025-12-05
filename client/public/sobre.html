@@ -62,11 +62,17 @@
 
                 <div class="historia-conteudo animar-scroll">
                     <div class="historia-texto">
-                        <p>Cataguases é uma cidade marcada pela criatividade e pelo espírito acolhedor de sua gente. Mas, como em tantas outras comunidades, o sedentarismo e a correria do dia a dia têm impactado a saúde e a qualidade de vida.</p>
-                        
-                        <p>Foi diante desse cenário que surgiu o <strong>Movimente-se</strong>, um projeto de extensão do <strong>Instituto Federal do Sudeste de Minas Gerais – Campus Cataguases</strong>, para mostrar que movimento é sinônimo de saúde, inclusão e bem-estar.</p>
-                        
-                        <p>Idealizado pelo professor Dr. Mauro Mazini, docente de Educação Física dessa instituição, o projeto nasceu no ambiente acadêmico e se tornou uma ação comunitária construída a muitas mãos.</p>
+                        <p>Cataguases é uma cidade marcada pela criatividade e pelo espírito acolhedor de sua gente.
+                            Mas, como em tantas outras comunidades, o sedentarismo e a correria do dia a dia têm
+                            impactado a saúde e a qualidade de vida.</p>
+
+                        <p>Foi diante desse cenário que surgiu o <strong>Movimente-se</strong>, um projeto de extensão
+                            do <strong>Instituto Federal do Sudeste de Minas Gerais – Campus Cataguases</strong>, para
+                            mostrar que movimento é sinônimo de saúde, inclusão e bem-estar.</p>
+
+                        <p>Idealizado pelo professor Dr. Mauro Mazini, docente de Educação Física dessa instituição, o
+                            projeto nasceu no ambiente acadêmico e se tornou uma ação comunitária construída a muitas
+                            mãos.</p>
                     </div>
                 </div>
             </div>
@@ -119,7 +125,9 @@
                 </div>
 
                 <div class="historia-texto animar-scroll" style="margin-top: 40px; text-align: center;">
-                    <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Hoje, o Movimente-se reúne todos esses atores em uma <strong>rede de esforços que transforma conhecimento em prática e gera impacto social real</strong>.</p>
+                    <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Hoje, o Movimente-se reúne todos
+                        esses atores em uma <strong>rede de esforços que transforma conhecimento em prática e gera
+                            impacto social real</strong>.</p>
                 </div>
             </div>
         </section>
@@ -136,19 +144,25 @@
                     <div class="compromisso-card">
                         <i class="fa-solid fa-school"></i>
                         <h3>Instituição Pública</h3>
-                        <p>O Movimente-se representa a essência do Instituto Federal do Sudeste de Minas Gerais: uma instituição pública, gratuita e de qualidade, que leva para além dos muros do Campus oportunidades reais de educação, cidadania e cuidado com a vida.</p>
+                        <p>O Movimente-se representa a essência do Instituto Federal do Sudeste de Minas Gerais: uma
+                            instituição pública, gratuita e de qualidade, que leva para além dos muros do Campus
+                            oportunidades reais de educação, cidadania e cuidado com a vida.</p>
                     </div>
 
                     <div class="compromisso-card">
                         <i class="fa-solid fa-heart"></i>
                         <h3>Impacto Social</h3>
-                        <p>Cada atividade reflete esse compromisso, oferecendo saúde, lazer e qualidade de vida a pessoas de todas as idades, transformando conhecimento acadêmico em benefício comunitário.</p>
+                        <p>Cada atividade reflete esse compromisso, oferecendo saúde, lazer e qualidade de vida a
+                            pessoas de todas as idades, transformando conhecimento acadêmico em benefício comunitário.
+                        </p>
                     </div>
 
                     <div class="compromisso-card">
                         <i class="fa-solid fa-trophy"></i>
                         <h3>Excelência</h3>
-                        <p>Esse trabalho só é possível graças ao apoio do IF Sudeste MG, por meio da Pró-Reitoria de Extensão, e à parceria de instituições locais que oferecem infraestrutura, incentivo e carinho constantes.</p>
+                        <p>Esse trabalho só é possível graças ao apoio do IF Sudeste MG, por meio da Pró-Reitoria de
+                            Extensão, e à parceria de instituições locais que oferecem infraestrutura, incentivo e
+                            carinho constantes.</p>
                     </div>
                 </div>
             </div>
@@ -188,13 +202,46 @@
 
                 <div class="faca-parte-conteudo animar-scroll">
                     <div class="faca-parte-texto">
-                        <p><strong>E queremos ir além:</strong> cada novo apoiador que se junta a nós fortalece ainda mais nossa capacidade de transformar vidas por meio do movimento humano.</p>
-                        
-                        <p>O Movimente-se é do IF, é de Cataguases, é da comunidade. <strong>É de todos nós.</strong></p>
-                        
+                        <p><strong>E queremos ir além:</strong> cada novo apoiador que se junta a nós fortalece ainda
+                            mais nossa capacidade de transformar vidas por meio do movimento humano.</p>
+
+                        <p>O Movimente-se é do IF, é de Cataguases, é da comunidade. <strong>É de todos nós.</strong>
+                        </p>
+
                         <div class="chamada-acao">
                             <p class="destaque">Movimente-se, pois ser saudável é estilo de vida!</p>
                             <a href="https://linktr.ee/MOVIMENTESEIF" class="botao-principal">Participe Agora</a>
+                            <button id="btnContato" class="botao-principal botao-parceiro">Seja Parceiro</button>
+
+                            <div id="meuModal" class="modal-overlay">
+                                <div class="modal-conteudo">
+                                    <span class="fechar-modal">&times;</span>
+                                    <h2 id="titulo-formulario">Fale Conosco</h2>
+
+                                    <form action="https://formspree.io/f/SEU_CODIGO_FORMSPREE" method="POST">
+
+                                        <div class="grupo-input">
+                                            <label for="nome">Nome Completo</label>
+                                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                                        </div>
+
+                                        <div class="grupo-input">
+                                            <label for="email">E-mail</label>
+                                            <input type="email" id="email" name="email"
+                                                placeholder="seuemail@exemplo.com" required>
+                                        </div>
+
+                                        <div class="grupo-input">
+                                            <label for="mensagem">Descrição</label>
+                                            <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?"
+                                                required></textarea>
+                                        </div>
+
+                                        <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                                    </form>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -216,10 +263,12 @@
                 <h3>Siga-nos</h3>
                 <div class="redes-sociais">
                     <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
-                        <a href="#" aria-label="Facebook" style="color: #1877f2; font-size: 20px; text-decoration: none;">
+                        <a href="#" aria-label="Facebook"
+                            style="color: #1877f2; font-size: 20px; text-decoration: none;">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <span style="font-family: Arial, sans-serif; font-size: 14px; color: #ecf0f1;">@movimentese_if</span>
+                        <span
+                            style="font-family: Arial, sans-serif; font-size: 14px; color: #ecf0f1;">@movimentese_if</span>
                     </div>
 
                     <div style="display: flex; align-items: center; gap: 10px;">
@@ -227,7 +276,8 @@
                             style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 20px; text-decoration: none;">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <span style="font-family: Arial, sans-serif; font-size: 14px; color: #ecf0f1;">@movimentese_if</span>
+                        <span
+                            style="font-family: Arial, sans-serif; font-size: 14px; color: #ecf0f1;">@movimentese_if</span>
                     </div>
                 </div>
             </div>
@@ -242,7 +292,8 @@
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2025 <strong>Movimente-se</strong> | IF Sudeste MG - Campus Cataguases | Todos os direitos reservados.</p>
+            <p>&copy; 2025 <strong>Movimente-se</strong> | IF Sudeste MG - Campus Cataguases | Todos os direitos
+                reservados.</p>
         </div>
     </footer>
 

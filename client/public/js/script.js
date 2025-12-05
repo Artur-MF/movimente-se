@@ -79,21 +79,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.5 });
     document.querySelectorAll('.contador, .contador-porcentagem').forEach(c => contadorObserver.observe(c));
 
-  const botaoTema = document.getElementById("toggle-tema");
-  
+    const botaoTema = document.getElementById("toggle-tema");
 
-  // Verifica o tema salvo
-  if (localStorage.getItem("tema") === "escuro") {
-    document.body.classList.add("modo-escuro");
-    botaoTema.textContent = "☀️";
-  }
 
-  botaoTema.addEventListener("click", () => {
-    document.body.classList.toggle("modo-escuro");
-    const estaEscuro = document.body.classList.contains("modo-escuro");
+    // Verifica o tema salvo
+    if (localStorage.getItem("tema") === "escuro") {
+        document.body.classList.add("modo-escuro");
+        botaoTema.textContent = "☀️";
+    }
 
-    botaoTema.textContent = estaEscuro ? "☀️" : "🌙";
-    localStorage.setItem("tema", estaEscuro ? "escuro" : "claro");
-  });
+    botaoTema.addEventListener("click", () => {
+        document.body.classList.toggle("modo-escuro");
+        const estaEscuro = document.body.classList.contains("modo-escuro");
+
+        botaoTema.textContent = estaEscuro ? "☀️" : "🌙";
+        localStorage.setItem("tema", estaEscuro ? "escuro" : "claro");
+    });
+
+    // Selecionando os elementos
+    const modal = document.getElementById("meuModal");
+    const btn = document.getElementById("btnContato");
+    const span = document.getElementsByClassName("fechar-modal")[0];
+
+    // Quando clicar no botão, abre o modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // Quando clicar no "X", fecha o modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // Quando clicar fora da caixa do modal, também fecha
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 
 })
