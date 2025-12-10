@@ -118,4 +118,56 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Seleciona os elementos baseados nas classes do seu CSS
+    const btnMenu = document.querySelector('.menu-hamburguer');
+    const menu = document.querySelector('.menu-mobile');
+    const overlay = document.querySelector('.menu-overlay');
+    
+    // Seleciona todos os links dentro do menu mobile (incluindo o botão de destaque)
+    const linksMenu = document.querySelectorAll('.menu-mobile a');
+
+    // Função que abre ou fecha o menu
+    function toggleMenu() {
+        // A classe 'ativo' é a chave que conecta com o seu CSS
+        const estaAtivo = menu.classList.contains('ativo');
+
+        if (estaAtivo) {
+            fecharMenu();
+        } else {
+            abrirMenu();
+        }
+    }
+
+    function abrirMenu() {
+        btnMenu.classList.add('ativo');
+        menu.classList.add('ativo');
+        overlay.classList.add('ativo');
+        
+        // (Opcional) Trava a rolagem do corpo do site
+        document.body.style.overflow = 'hidden'; 
+    }
+
+    function fecharMenu() {
+        btnMenu.classList.remove('ativo');
+        menu.classList.remove('ativo');
+        overlay.classList.remove('ativo');
+        
+        // (Opcional) Destrava a rolagem do corpo do site
+        document.body.style.overflow = 'auto';
+    }
+
+    // Evento de clique no ícone hamburguer
+    btnMenu.addEventListener('click', toggleMenu);
+
+    // Evento de clique no overlay (fundo escuro)
+    overlay.addEventListener('click', fecharMenu);
+
+    // Evento para fechar o menu ao clicar em qualquer link
+    linksMenu.forEach(link => {
+        link.addEventListener('click', fecharMenu);
+    });
+});

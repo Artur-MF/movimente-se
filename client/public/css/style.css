@@ -169,6 +169,10 @@
             width: 100%;
         }
 
+
+
+
+
         .botao-cadastrar {
             background-color: var(--cor-principal);
             color: var(--cor-branco);
@@ -185,6 +189,11 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             animation: pulsacao 1.5s infinite;
         }
+
+
+        
+
+
 
         /* --- Capa Inicial --- */
         #capa-inicial {
@@ -1438,3 +1447,252 @@
                 font-size: 1rem;
             }
         }
+
+
+        /* =======================
+   MENU HAMBÚRGUER E MOBILE
+   ======================= */
+
+/* Botão Hambúrguer */
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    width: 30px;
+    height: 24px;
+    position: relative;
+}
+
+.menu-hamburguer span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--cor-principal);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+.menu-hamburguer span:nth-child(1) {
+    top: 0;
+}
+
+.menu-hamburguer span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-hamburguer span:nth-child(3) {
+    bottom: 0;
+}
+
+/* Animação do hambúrguer para X */
+.menu-hamburguer.ativo span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.menu-hamburguer.ativo span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburguer.ativo span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+/* =========================================
+   MENU HAMBÚRGUER (Padrão Desktop: Oculto)
+   ========================================= */
+.menu-hamburguer {
+    display: none; /* O SEGREDO: Começa invisível no PC */
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    width: 30px;
+    height: 24px;
+    position: relative;
+}
+
+.menu-hamburguer span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--cor-principal);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+.menu-hamburguer span:nth-child(1) { top: 0; }
+.menu-hamburguer span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.menu-hamburguer span:nth-child(3) { bottom: 0; }
+
+/* Animação do X quando ativo */
+.menu-hamburguer.ativo span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+.menu-hamburguer.ativo span:nth-child(2) { opacity: 0; }
+.menu-hamburguer.ativo span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
+
+
+/* =========================================
+   MENU MOBILE (Gaveta Lateral)
+   ========================================= */
+.menu-mobile {
+    display: none; /* Começa oculto para não atrapalhar o layout */
+    position: fixed;
+    top: 0;
+    right: -100%; /* Escondido para a direita */
+    width: 280px;
+    height: 100vh;
+    background-color: var(--cor-branco);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    padding-top: 80px;
+    overflow-y: auto;
+}
+
+.menu-mobile.ativo {
+    right: 0; /* Desliza para dentro */
+}
+
+.menu-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-mobile li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.menu-mobile a {
+    display: block;
+    padding: 18px 30px;
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menu-mobile a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: var(--cor-principal);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.menu-mobile a:hover,
+.menu-mobile a:active {
+    background-color: rgba(39, 174, 96, 0.05);
+    padding-left: 35px;
+}
+
+.menu-mobile a:hover::before {
+    transform: scaleY(1);
+}
+
+/* Botão destaque dentro do menu mobile */
+.menu-mobile .botao-mobile {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    margin: 20px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 15px 30px !important;
+}
+
+.menu-mobile .botao-mobile:hover {
+    background-color: var(--cor-principal-clara);
+    padding-left: 30px !important;
+}
+
+.menu-mobile .botao-mobile::before {
+    display: none;
+}
+
+/* Overlay (Fundo escuro) */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.menu-overlay.ativo {
+    display: block;
+    opacity: 1;
+}
+
+/* Tema Escuro - Menu Mobile */
+body.modo-escuro .menu-mobile {
+    background-color: #2f3640;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+body.modo-escuro .menu-mobile li {
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+body.modo-escuro .menu-mobile a {
+    color: #ecf0f1;
+}
+
+body.modo-escuro .menu-mobile a:hover,
+body.modo-escuro .menu-mobile a:active {
+    background-color: rgba(46, 204, 113, 0.1);
+}
+
+
+/* =========================================
+   RESPONSIVIDADE (Onde a mágica acontece)
+   ========================================= */
+@media (max-width: 992px) {
+    
+    /* 1. Esconde o menu de desktop normal */
+    .menu-navegacao {
+        display: none;
+    }
+
+    /* 2. Esconde o botão "Comece Já" do header (já que ele está dentro do menu mobile) */
+    .cabecalho .botao-cadastrar {
+        display: none; 
+    }
+
+    /* 3. Mostra o botão Hambúrguer */
+    .menu-hamburguer {
+        display: flex;
+    }
+
+    /* 4. Torna o bloco do menu mobile "renderizável" (para a animação funcionar) */
+    .menu-mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-mobile {
+        width: 100%;
+        max-width: 300px;
+    }
+}

@@ -22,20 +22,41 @@
 
     <header class="cabecalho" id="cabecalho">
         <div class="container">
-            <a href="index.html" class="logo">
+            <a href="#capa-inicial" class="logo">
                 <i class="fa-solid fa-person-running"></i> Movimente-se
             </a>
+
+            <button class="menu-hamburguer" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <nav class="menu-navegacao">
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="index.html#missao">Missão</a></li>
-                    <li><a href="index.html#projetos">Projetos</a></li>
+                    <li><a href="#missao">Missão</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
                     <li><a href="equipe.html">Equipe</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                 </ul>
             </nav>
             <a href="https://linktr.ee/MOVIMENTESEIF" class="botao-cadastrar">Comece Já</a>
         </div>
+
+        <nav class="menu-mobile" id="menu-mobile">
+            <ul>
+                <li><a href="index.html" class="link-mobile">Início</a></li>
+                <li><a href="#missao" class="link-mobile">Missão</a></li>
+                <li><a href="#projetos" class="link-mobile">Projetos</a></li>
+                <li><a href="equipe.html" class="link-mobile">Equipe</a></li>
+                <li><a href="sobre.html" class="link-mobile">Sobre</a></li>
+                <li><a href="https://linktr.ee/MOVIMENTESEIF" class="botao-cadastrar">Comece Já</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-overlay"></div>
+
     </header>
 
     <main>
@@ -444,8 +465,8 @@
                     </article>
 
                     <article class="card animar-scroll">
-                        <img src="assets/equipe/colaboradores/isabella_pires.jpeg" alt="Assistente" class="card-imagem"
-                            style="object-position: 50% 11%; height: 300px;">
+                        <img src="assets/equipe/bolsistas/emanuel.jpg" alt="Assistente" class="card-imagem"
+                            style="object-position: 50% 30%; height: 300px;">
                         <div class="card-conteudo">
                             <h3>Emanuel Afonso Abritta</h3>
                             <p class="cargo-equipe">Voluntário de Apoio</p>
