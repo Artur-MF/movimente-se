@@ -1222,7 +1222,7 @@
         .botao-principal {
             display: inline-block;
             background-color: var(--cor-principal);
-            color: var(--cor-branco);
+            color: #fff;
             padding: 15px 40px;
             border-radius: 50px;
             text-decoration: none;
@@ -1373,8 +1373,9 @@
         }
 
         .botao-parceiro {
-            background-color: rgb(255, 255, 255);
+            background-color: var(--cor-principal);
             cursor: pointer;
+            color: #fff;
         }
 
         .botao-principal:hover {
