@@ -1,414 +1,190 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movimente-se - Transformação através do Movimento</title>
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Movimente-se: extensão gratuita do IF Sudeste MG que aproxima saúde, esporte, educação e comunidade em Cataguases.">
+  <meta name="theme-color" content="#176B4A">
+  <meta property="og:title" content="Movimente-se — Movimento que aproxima, cuida e transforma">
+  <meta property="og:description" content="Atividades gratuitas de saúde, esporte e lazer para a comunidade de Cataguases.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/outros/movimente-se-og.jpg">
+  <title>Movimente-se — Saúde, esporte e comunidade</title>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    <header class="cabecalho" id="cabecalho">
-        <div class="container">
-            <a href="#capa-inicial" class="logo">
-                <i><img src="assets/outros/logo.png" alt="" style="height: 50px;"></i> Movimente-se
-            </a>
+  <header class="site-header" id="cabecalho">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="Movimente-se, página inicial">
+        <img src="assets/optimized/logo.webp" alt="" width="42" height="42">
+        <span>Movimente-se</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="atividades.html">Atividades</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="equipe.html">Equipe</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li class="mobile-cta-item"><a class="mobile-cta" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Quero participar</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Ativar tema escuro" title="Ativar tema escuro"><span class="theme-toggle__icon theme-toggle__sun" aria-hidden="true">☀</span><span class="theme-toggle__icon theme-toggle__moon" aria-hidden="true">◐</span></button>
+      <a class="button button--primary header-cta" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Quero participar</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="site-nav" aria-expanded="false"><span></span></button>
+    </div>
+    <button class="menu-backdrop" type="button" tabindex="-1" aria-label="Fechar menu"></button>
+  </header>
 
-            <button class="menu-hamburguer" aria-label="Abrir menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  <main id="conteudo" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero__media" src="assets/optimized/Projetos/corrida0.webp" srcset="assets/optimized/responsive/480/corrida0.webp 480w, assets/optimized/responsive/800/corrida0.webp 800w, assets/optimized/responsive/1200/corrida0.webp 1200w, assets/optimized/Projetos/corrida0.webp 1600w" sizes="100vw" alt="Participantes do Movimente-se em atividade ao ar livre" width="1600" height="1200" fetchpriority="high">
+      <div class="container hero__content">
+        <p class="eyebrow">Extensão gratuita do IF Sudeste MG</p>
+        <h1 id="hero-title">Movimento que aproxima, cuida e transforma</h1>
+        <p class="hero__lead">Esporte, saúde e lazer conectando o Campus Avançado Cataguases à comunidade — com experiências inclusivas e formação prática para estudantes.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#atividades-destaque">Conheça as atividades</a>
+          <a class="button button--secondary" href="#como-participar">Saiba como participar</a>
+        </div>
+        <ul class="hero__facts" aria-label="Características do projeto">
+          <li>Gratuito</li>
+          <li>Para diferentes idades</li>
+          <li>Em Cataguases</li>
+        </ul>
+      </div>
+    </section>
 
-            <nav class="menu-navegacao">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="#missao">Missão</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="equipe.html">Equipe</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                </ul>
-            </nav>
-            <a href="https://linktr.ee/MOVIMENTESEIF" class="botao-cadastrar">Comece Já</a>
+    <section class="section section--white" id="atividades-destaque">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Encontre seu movimento</p>
+            <h2>Atividades para diferentes momentos da vida</h2>
+          </div>
+          <p class="section-heading__copy">Conheça algumas das ações que reúnem exercício, convivência e cuidado. A disponibilidade de vagas e os requisitos são informados nos canais oficiais.</p>
         </div>
 
-        <nav class="menu-mobile" id="menu-mobile">
-            <ul>
-                <li><a href="index.html" class="link-mobile">Início</a></li>
-                <li><a href="#missao" class="link-mobile">Missão</a></li>
-                <li><a href="#projetos" class="link-mobile">Projetos</a></li>
-                <li><a href="equipe.html" class="link-mobile">Equipe</a></li>
-                <li><a href="sobre.html" class="link-mobile">Sobre</a></li>
-                <li><a href="https://linktr.ee/MOVIMENTESEIF" class="botao-cadastrar">Comece Já</a></li>
-            </ul>
-        </nav>
-
-        <div class="menu-overlay"></div>
-
-    </header>
-
-    <main>
-        <!-- SEÇÃO CAPA INICIAL -->
-        <section id="capa-inicial">
-            <div class="carrossel">
-                <div class="slide ativo" style="background-image: url('assets/Projetos/corrida0.jpeg');">
-                </div>
-                <div class="slide" style="background-image: url('assets/Projetos/adolescentes.jpg');">
-                </div>
-                <div class="slide" style="background-image: url('assets/Projetos/pilates.jpg');">
-                </div>
+        <div class="card-grid">
+          <article class="activity-card">
+            <div class="activity-card__media"><img src="assets/optimized/Projetos/corrida0.webp" srcset="assets/optimized/responsive/480/corrida0.webp 480w, assets/optimized/responsive/800/corrida0.webp 800w, assets/optimized/responsive/1200/corrida0.webp 1200w, assets/optimized/Projetos/corrida0.webp 1600w" sizes="100vw" alt="Grupo durante atividade de caminhada e corrida" width="1600" height="1200" loading="lazy"></div>
+            <div class="activity-card__body">
+              <div class="activity-card__tags"><span class="tag">Adultos</span><span class="tag tag--status">Consulte vagas</span></div>
+              <h3>Passos de Resiliência</h3>
+              <p>Caminhada e corrida para desenvolver condicionamento, saúde emocional e superação gradual de desafios.</p>
+              <a class="text-link" href="atividades.html#passos">Ver atividade</a>
             </div>
-            <div class="overlay"></div>
-            <div class="container conteudo-capa animar-scroll">
-                <h1>MOVIMENTE-SE</h1>
-                <p style="color: #ecf0f1;">Transformando vidas através do movimento, saúde e comunidade. Juntos, criamos
-                    um futuro mais ativo e saudável.</p>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-card__media"><img src="assets/optimized/Projetos/idosos.webp" srcset="assets/optimized/responsive/480/idosos.webp 480w, assets/optimized/responsive/800/idosos.webp 800w, assets/optimized/responsive/1200/idosos.webp 1200w, assets/optimized/Projetos/idosos.webp 1362w" sizes="100vw" alt="Pessoas idosas participando de atividade física" width="1600" height="901" loading="lazy"></div>
+            <div class="activity-card__body">
+              <div class="activity-card__tags"><span class="tag">Pessoas idosas</span><span class="tag tag--status">Consulte vagas</span></div>
+              <h3>Treinamento Multicomponente Para Idosos</h3>
+              <p>Exercícios físicos e cognitivos para autonomia, equilíbrio, força, mobilidade e qualidade de vida.</p>
+              <a class="text-link" href="atividades.html#idosos">Ver atividade</a>
             </div>
-        </section>
+          </article>
 
-        <!-- SEÇÃO MISSÃO E VISÃO -->
-        <section id="missao" class="secao">
-            <div class="container">
-                <div class="titulo-secao animar-scroll">
-                    <h2>Nossa Missão & Visão</h2>
-                    <p>Conectando a comunidade ao IF Sudeste MG Campus Cataguases por meio de experiências
-                        transformadoras, promovendo saúde, lazer e qualidade de vida através do movimento humano</p>
-                </div>
-
-                <div class="grid-principios">
-                    <div class="principio-item animar-scroll">
-                        <i class="fa-solid fa-bullseye"></i>
-                        <h3>Missão</h3>
-                        <p>Promover saúde, lazer e qualidade de vida por meio do movimento em suas diversas formas,
-                            unindo ensino, pesquisa, extensão e gestão para transformar vidas através do movimento.</p>
-                    </div>
-
-                    <div class="principio-item animar-scroll">
-                        <i class="fa-solid fa-star"></i>
-                        <h3>Visão</h3>
-                        <p>Ser referência em projetos extensionistas que unem ciência, práticas corporais e compromisso
-                            social, consolidando um polo de transformação em saúde e qualidade de vida.</p>
-                    </div>
-                </div>
+          <article class="activity-card">
+            <div class="activity-card__media"><img src="assets/optimized/Projetos/adolescentes.webp" srcset="assets/optimized/responsive/480/adolescentes.webp 480w, assets/optimized/responsive/800/adolescentes.webp 800w, assets/optimized/responsive/1200/adolescentes.webp 1200w, assets/optimized/Projetos/adolescentes.webp 1600w" sizes="100vw" alt="Adolescentes em aula de beach tennis" width="1600" height="1200" loading="lazy"></div>
+            <div class="activity-card__body">
+              <div class="activity-card__tags"><span class="tag">Adolescentes</span><span class="tag tag--status">Consulte vagas</span></div>
+              <h3>Na Vibe da Areia</h3>
+              <p>Beach tennis para estimular coordenação motora, convivência, lazer ativo e habilidades socioemocionais.</p>
+              <a class="text-link" href="atividades.html#vibe">Ver atividade</a>
             </div>
-        </section>
-
-        <!-- SEÇÃO ESTATÍSTICAS -->
-        <section id="estatisticas" class="secao secao-alternativa">
-            <div class="container">
-                <div class="titulo-secao animar-scroll">
-                    <h2>Nossos Impactos</h2>
-                    <p>Números que refletem nosso compromisso com a transformação social</p>
-                </div>
-                <div class="grid-estatisticas">
-                    <div class="estatistica-item animar-scroll">
-                        <span class="contador" data-alvo="300">0</span>
-                        <p>Famílias Impactadas(aproximadamente)</p>
-                    </div>
-                    <div class="estatistica-item animar-scroll">
-                        <span class="contador" data-alvo="8">0</span>
-                        <p>Programas Ativos</p>
-                    </div>
-                    <div class="estatistica-item animar-scroll">
-                        <span class="contador" data-alvo="6">0</span>
-                        <p>Meses de Dedicação</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO VALORES -->
-        <section id="valores" class="secao secao-alternativa">
-            <div class="container">
-                <div class="titulo-secao animar-scroll">
-                    <h2>Nossos Valores Fundamentais</h2>
-                    <p>Princípios que guiam cada ação e decisão do Movimente-se</p>
-                </div>
-                <div class="grid-conteudo">
-                    <div class="card animar-scroll">
-                        <div class="card-conteudo">
-                            <i class="fa-solid fa-hand-holding-heart icone"></i>
-                            <h3>Acesso & Qualidade</h3>
-                            <p>Extensão como direito de todos, oferecendo serviços gratuitos e de excelência sem
-                                barreiras.</p>
-                        </div>
-                    </div>
-
-                    <div class="card animar-scroll">
-                        <div class="card-conteudo">
-                            <i class="fa-solid fa-heart-pulse icone"></i>
-                            <h3>Saúde Integral</h3>
-                            <p>Cuidado holístico com a saúde física, mental e emocional de cada participante.</p>
-                        </div>
-                    </div>
-
-                    <div class="card animar-scroll">
-                        <div class="card-conteudo">
-                            <i class="fa-solid fa-dumbbell icone"></i>
-                            <h3>Exercício & Esporte</h3>
-                            <p>Ferramentas poderosas de educação, inclusão, transformação pessoal e coletiva.</p>
-                        </div>
-                    </div>
-
-                    <div class="card animar-scroll">
-                        <div class="card-conteudo">
-                            <i class="fa-solid fa-person-running icone"></i>
-                            <h3>Estilo de Vida Ativo</h3>
-                            <p>Incentivo contínuo à mudança de hábitos e prática regular de atividades saudáveis.</p>
-                        </div>
-                    </div>
-
-                    <div class="card animar-scroll">
-                        <div class="card-conteudo">
-                            <i class="fa-solid fa-handshake icone"></i>
-                            <h3>Profissionais Qualificados</h3>
-                            <p>Colaboradores externos e alunos bolsistas, selecionados em editais por sua expertise,
-                                garantem atendimento especializado e de excelência à comunidade.</p>
-                        </div>
-                    </div>
-
-                    <div class="card animar-scroll">
-                        <div class="card-conteudo">
-                            <i class="fa-solid fa-award icone"></i>
-                            <h3>Parcerias Estratégicas</h3>
-                            <p>Apoio público e privado oferece acesso a espaços de alta qualidade para práticas
-                                esportivas e atividades físicas, beneficiando todos os participantes.</p>
-                        </div>
-                    </div>
-
-                    <div class="card animar-scroll">
-                        <div class="card-conteudo">
-                            <i class="fa-solid fa-spa icone"></i>
-                            <h3>Lazer & Bem-Estar</h3>
-                            <p>Valorização do lazer como espaço genuíno de convivência, prazer e qualidade de vida.</p>
-                        </div>
-                    </div>
-
-                    <div class="card animar-scroll">
-                        <div class="card-conteudo">
-                            <i class="fa-solid fa-brain icone"></i>
-                            <h3>Habilidades Socioemocionais</h3>
-                            <p>Desenvolvimento de empatia, resiliência, cooperação e convivência respeitosa.</p>
-                        </div>
-                    </div>
-
-                    <div class="card animar-scroll">
-                        <div class="card-conteudo">
-                            <i class="fa-solid fa-globe icone"></i>
-                            <h3>Responsabilidade Social</h3>
-                            <p>Compromisso genuíno em transformar e impactar positivamente a realidade local.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO PROJETOS -->
-        <section id="projetos" class="secao">
-            <div class="container">
-                <div class="titulo-secao animar-scroll">
-                    <h2>Projetos em Transformação</h2>
-                    <p>Conheça as iniciativas que estão mudando vidas em Cataguases</p>
-                </div>
-
-                <div class="grid-conteudo">
-                    <!-- Projeto 1 -->
-                    <article class="card animar-scroll">
-                        <img src="assets/Projetos/corrida0.jpeg" alt="Passos de Resiliência" class="card-imagem">
-                        <div class="card-conteudo">
-                            <h3>Passos de Resiliência</h3>
-                            <p>Caminhadas e corridas para maiores de 18 anos, fortalecendo corpo, mente e espírito
-                                através da resiliência e superação de desafios pessoais.</p>
-                        </div>
-                    </article>
-
-                    <!-- Projeto 2 -->
-                    <article class="card animar-scroll">
-                        <img src="assets/Projetos/idosos.jpeg" alt="Treinamento Multicomponente" class="card-imagem">
-                        <div class="card-conteudo">
-                            <h3>Treinamento Multicomponente para Idosos</h3>
-                            <p>Exercícios físicos e cognitivos especialmente desenvolvidos para a população idosa,
-                                promovendo autonomia, independência e vida plena.</p>
-                        </div>
-                    </article>
-
-                    <!-- Projeto 3 -->
-                    <article class="card animar-scroll">
-                        <img src="assets/Projetos/beach_tennis.jpg" alt="Servidores na Vibe da Areia"
-                            class="card-imagem">
-                        <div class="card-conteudo">
-                            <h3>Servidores na Vibe da Areia</h3>
-                            <p>Beach Tennis e Vôlei de Praia para servidor do IF Sudeste, criando momentos de
-                                descontração, socialização e saúde em ambiente lúdico.</p>
-                        </div>
-                    </article>
-
-                    <!-- Projeto 4 -->
-                    <article class="card animar-scroll">
-                        <img src="assets/Projetos/pilates.jpg" alt="Na Resistência da Mola" class="card-imagem">
-                        <div class="card-conteudo">
-                            <h3>Na Resistência da Mola</h3>
-                            <p>Pilates para servidores do campus, aperfeiçoando postura, flexibilidade e equilíbrio,
-                                oferecendo pausa restauradora na rotina laboral.</p>
-                        </div>
-                    </article>
-
-                    <!-- Projeto 5 -->
-                    <article class="card animar-scroll">
-                        <img src="assets/Projetos/adolescentes.jpg" alt="Na Vibe da Areia" class="card-imagem">
-                        <div class="card-conteudo">
-                            <h3>Na Vibe da Areia</h3>
-                            <p>Beach Tênis para alunos do 9º ano de escolas públicas, estimulando lazer ativo,
-                                integração social e desenvolvimento de habilidades motoras.</p>
-                        </div>
-                    </article>
-
-                    <!-- Projeto 6 -->
-                    <article class="card animar-scroll">
-                        <img src="assets/Projetos/tenisdemesa.jpeg" alt="Agilidade em Movimento" class="card-imagem">
-                        <div class="card-conteudo">
-                            <h3>Agilidade em Movimento</h3>
-                            <p>Tênis de Mesa para alunos do 9º ano de escolas públicas, desenvolvendo agilidade,
-                                concentração, habilidades cognitivas e integração social.</p>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/Projetos/ginastica_elaboral.jpeg" class="card-imagem">
-                        <div class="card-conteudo">
-                            <h3 style="font-size: 1.2rem;">Ergonomia e Ginástica Laboral Aplicadas ao Ambiente
-                                Educacional</h3>
-                            <p>O projeto avaliou a ergonomia no trabalho com base na NR 17 por meio de entrevistas,
-                                análise de posturas, mobiliário, dinâmica de trabalho e APR, além de registros em fotos
-                                e vídeos no IF Sudeste MG – Campus Avançado Cataguases. Também incluiu ginástica
-                                laboral, a elaboração de um manual de boas práticas e uma palestra de capacitação,
-                                integradas à curricularização da extensão.</p>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/Projetos/extensaoif.jpg "
-                            alt="Na Vibe da Areia" class="card-imagem">
-                        <div class="card-conteudo">
-                            <h3 style="font-size: 1rem;">Gestão e Fortalecimento da Marca de Projetos de Exercício
-                                Físico,
-                                Esportes e Lazer no IF Sudeste MG – Campus Avançado Cataguases
-                            </h3>
-                            <p>O projeto fortalece a extensão e a relação com a comunidade por meio de ações voltadas à
-                                saúde, bem-estar e atividades físicas, esportivas e culturais. Envolvendo alunos de
-                                Tecnologia em Processos Gerenciais na gestão dessas iniciativas, promove desenvolvimento
-                                de habilidades e reforça o compromisso institucional com o impacto social e acadêmico.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO DIFERENCIAIS -->
-        <section class="secao secao-alternativa">
-            <div class="container">
-                <div class="titulo-secao animar-scroll">
-                    <h2>Por Que Escolher o Movimente-se?</h2>
-                    <p>Uma abordagem integral e transformadora para sua saúde</p>
-                </div>
-
-                <div class="grid-conteudo">
-                    <div class="card animar-scroll">
-                        <div class="card-conteudo">
-                            <i class="fa-solid fa-check-circle icone" style="color: #2ecc71;"></i>
-                            <h3>100% Gratuito</h3>
-                            <p>Acesso sem custo a atividades de qualidade superior, porque saúde é direito de todos.</p>
-                        </div>
-                    </div>
-
-                    <div class="card animar-scroll">
-                        <div class="card-conteudo">
-                            <i class="fa-solid fa-users-line icone" style="color: #3498db;"></i>
-                            <h3>Comunidade Acolhedora</h3>
-                            <p>Ambiente inclusivo onde cada pessoa é respeitada em seu ritmo e limitações únicas.</p>
-                        </div>
-                    </div>
-
-                    <div class="card animar-scroll">
-                        <div class="card-conteudo">
-                            <i class="fa-solid fa-lightbulb icone" style="color: #f39c12;"></i>
-                            <h3>Inovação & Pesquisa</h3>
-                            <p>Programas desenvolvidos com base em pesquisa científica e melhores práticas.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- RODAPÉ -->
-    <footer class="rodape">
-        <div class="container grid-rodape">
-            <div class="coluna-rodape">
-                <h3>Movimente-se</h3>
-                <p>Transformando comunidades através do movimento, saúde e bem-estar integral desde 2025.</p>
-                <p><strong>Contato:</strong> <a href="mailto:movimenteseif@gmail.com">movimenteseif@gmail.com</a></p>
-            </div>
-
-            <div class="coluna-rodape">
-                <h3>Siga-nos & Conecte</h3>
-                <div class="redes-sociais">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
-                        <a href="#" aria-label="Facebook"
-                            style="color: #1877f2; font-size: 20px; text-decoration: none;">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <span
-                            style="font-family: Arial, sans-serif; font-size: 14px; color: #ecf0f1;">@movimentese_if</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <a href="#" aria-label="Instagram"
-                            style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 20px; text-decoration: none;">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <span
-                            style="font-family: Arial, sans-serif; font-size: 14px; color: #ecf0f1;">@movimentese_if</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="coluna-rodape">
-                <h3>Fique Atualizado</h3>
-                <p>Receba dicas exclusivas e novidades diretamente no seu e-mail!</p>
-                <form id="formulario-newsletter" action="https://formspree.io/f/xldqawod" method="post">
-                    <input type="email" id="email-newsletter" placeholder="Seu melhor e-mail" required>
-                    <button type="submit" class="botao-inscrever">Inscrever-se</button>
-                    <p id="feedback-newsletter" class="feedback-form"></p>
-                </form>
-            </div>
+          </article>
         </div>
+        <div class="section-action"><a class="button button--outline" href="atividades.html" data-page-transition>Ver todas as atividades</a></div>
+      </div>
+    </section>
 
-        <div class="copyright">
-            <p>&copy; 2025 <strong>Movimente-se</strong> | IF Sudeste MG - Campus Cataguases | Todos os direitos
-                reservados.</p>
+    <section class="impact-strip" aria-labelledby="impacto-title">
+      <div class="container impact-grid">
+        <div class="impact-intro">
+          <p class="eyebrow">Nosso alcance</p>
+          <h2 id="impacto-title">Impacto feito em comunidade</h2>
+          <p>Indicadores de referência da fase inicial do projeto.</p>
         </div>
-    </footer>
+        <div class="impact-metrics">
+          <article class="impact-item"><div class="impact-item__top"><span class="impact-item__label">Alcance comunitário</span><span class="impact-item__index" aria-hidden="true">01</span></div><strong>+600</strong><p>famílias alcançadas</p></article>
+          <article class="impact-item"><div class="impact-item__top"><span class="impact-item__label">Rede de projetos</span><span class="impact-item__index" aria-hidden="true">02</span></div><strong>13</strong><p>ações reunidas</p></article>
+          <article class="impact-item"><div class="impact-item__top"><span class="impact-item__label">Trajetória inicial</span><span class="impact-item__index" aria-hidden="true">03</span></div><strong>14</strong><p>meses de atuação</p></article>
+        </div>
+      </div>
+    </section>
 
-    <button id="toggle-tema" aria-label="Alternar tema">
-        🌙
-    </button>
+    <section class="section" id="como-participar">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Como participar</p>
+            <h2>Do interesse ao primeiro encontro</h2>
+          </div>
+          <p class="section-heading__copy">Cada ação pode ter público, vagas e requisitos próprios. O caminho começa pelos canais oficiais do projeto.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><h3>Escolha uma atividade</h3><p>Veja qual proposta combina com seu perfil e objetivo.</p></article>
+          <article class="step"><h3>Confira os requisitos</h3><p>Observe público, faixa etária e orientações de segurança.</p></article>
+          <article class="step"><h3>Faça sua inscrição</h3><p>Acesse o canal oficial e acompanhe a disponibilidade.</p></article>
+          <article class="step"><h3>Participe e acompanhe</h3><p>Compareça aos encontros e compartilhe sua experiência.</p></article>
+        </div>
+      </div>
+    </section>
 
-    <script src="js/script.js"></script>
+    <section class="section section--soft" id="proposito">
+      <div class="container split">
+        <div class="split__media"><img src="assets/optimized/Projetos/idoso_grama.webp" srcset="assets/optimized/responsive/480/idoso_grama.webp 480w, assets/optimized/responsive/800/idoso_grama.webp 800w, assets/optimized/responsive/1200/idoso_grama.webp 1200w, assets/optimized/Projetos/idoso_grama.webp 1600w" sizes="100vw" alt="Atividade coletiva do Movimente-se em espaço aberto" width="1600" height="720" loading="lazy"></div>
+        <div class="split__content">
+          <p class="eyebrow">Nosso propósito</p>
+          <h2>Saúde integral com acesso, ciência e acolhimento</h2>
+          <p>O Movimente-se amplia o acesso gratuito a práticas que favorecem a saúde física, mental e social, enquanto aproxima o IF Sudeste MG da comunidade e cria experiências formativas para estudantes.</p>
+          <div class="pillars">
+            <div class="pillar"><strong>Acesso e inclusão</strong><span>Atividades gratuitas para diferentes públicos.</span></div>
+            <div class="pillar"><strong>Saúde integral</strong><span>Cuidado físico, mental e social.</span></div>
+            <div class="pillar"><strong>Educação e ciência</strong><span>Conhecimento aplicado em situações reais.</span></div>
+            <div class="pillar"><strong>Comunidade</strong><span>Convivência e responsabilidade social.</span></div>
+          </div>
+          <p><a class="text-link" href="sobre.html">Conheça nossa história</a></p>
+        </div>
+      </div>
+    </section>
 
+    <section class="section section--white">
+      <div class="container">
+        <div class="institutional-banner">
+          <img src="assets/optimized/Projetos/extensaoif.webp" srcset="assets/optimized/responsive/480/extensaoif.webp 480w, assets/optimized/responsive/800/extensaoif.webp 800w, assets/optimized/responsive/1200/extensaoif.webp 1200w, assets/optimized/Projetos/extensaoif.webp 1600w" sizes="100vw" alt="Estudantes e comunidade em ação de extensão do IF Sudeste MG" width="1600" height="900" loading="lazy">
+          <div class="institutional-banner__content">
+            <p class="eyebrow">Extensão que forma e transforma</p>
+            <h2>Impacto social e aprendizagem caminhando juntos</h2>
+            <p>Professores, estudantes, colaboradores, voluntários e parceiros transformam conhecimento acadêmico em cuidado, organização e oportunidades para a comunidade.</p>
+            <a class="button button--secondary" href="equipe.html">Conheça quem faz acontecer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container cta-band__inner">
+        <div><h2 id="cta-title">Pronto para se movimentar?</h2><p>Consulte atividades, requisitos e inscrições nos canais oficiais do projeto.</p></div>
+        <div class="cta-band__actions"><a class="button button--primary" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Quero participar</a><a class="button button--outline" href="mailto:movimenteseif@gmail.com">Falar com a equipe</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h2>Movimente-se</h2><p>Extensão do IF Sudeste MG — Campus Avançado Cataguases, conectando educação, saúde, esporte e comunidade.</p></div>
+        <div><h3>Navegação</h3><ul class="footer-links"><li><a href="atividades.html">Atividades</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="equipe.html">Equipe</a></li><li><a href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Links oficiais</a></li></ul></div>
+        <div class="footer-contact"><h3>Contato</h3><a href="mailto:movimenteseif@gmail.com">movimenteseif@gmail.com</a><span>Cataguases, Minas Gerais</span><span>@movimentese_if</span></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-current-year>2026</span> Movimente-se.</span><span>Projeto público, gratuito e inclusivo.</span></div>
+    </div>
+  </footer>
 </body>
-
 </html>

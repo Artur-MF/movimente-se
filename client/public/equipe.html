@@ -1,565 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movimente-se - Conheça Nossa Equipe</title>
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça a equipe de coordenação, profissionais, bolsistas e voluntários do Movimente-se.">
+  <meta name="theme-color" content="#176B4A">
+  <meta property="og:title" content="Equipe — Movimente-se"><meta property="og:description" content="Pessoas que transformam conhecimento em cuidado e impacto social."><meta property="og:type" content="website"><meta property="og:image" content="assets/outros/movimente-se-og.jpg">
+  <title>Equipe — Movimente-se</title>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header" id="cabecalho">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="Movimente-se, página inicial"><img src="assets/optimized/logo.webp" alt="" width="42" height="42"><span>Movimente-se</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal"><ul><li><a href="index.html">Início</a></li><li><a href="atividades.html">Atividades</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="equipe.html" aria-current="page">Equipe</a></li><li><a href="#contato">Contato</a></li><li class="mobile-cta-item"><a class="mobile-cta" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Quero participar</a></li></ul></nav>
+      <button class="theme-toggle" type="button" aria-label="Ativar tema escuro" title="Ativar tema escuro"><span class="theme-toggle__icon theme-toggle__sun" aria-hidden="true">☀</span><span class="theme-toggle__icon theme-toggle__moon" aria-hidden="true">◐</span></button>
+      <a class="button button--primary header-cta" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Quero participar</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="site-nav" aria-expanded="false"><span></span></button>
+    </div>
+    <button class="menu-backdrop" type="button" tabindex="-1" aria-label="Fechar menu"></button>
+  </header>
 
-    <header class="cabecalho" id="cabecalho">
-        <div class="container">
-            <a href="#capa-inicial" class="logo">
-                <i><img src="assets/outros/logo.png" alt="" style="height: 50px;"></i> Movimente-se
-            </a>
+  <main id="conteudo" tabindex="-1">
+    <section class="page-hero page-hero--team" aria-labelledby="page-title">
+      <img class="page-hero__media" src="assets/optimized/Projetos/capa-equipe.webp" srcset="assets/optimized/responsive/480/capa-equipe.webp 480w, assets/optimized/responsive/800/capa-equipe.webp 800w, assets/optimized/responsive/1200/capa-equipe.webp 1200w, assets/optimized/Projetos/capa-equipe.webp 1416w" sizes="100vw" alt="Equipe do Movimente-se reunida" width="1416" height="800" fetchpriority="high">
+      <div class="container page-hero__content">
+        <p class="eyebrow">Quem faz acontecer</p>
+        <h1 id="page-title">Pessoas que transformam conhecimento em cuidado</h1>
+        <p>Coordenação, profissionais, bolsistas e voluntários trabalham em rede para planejar, orientar e acompanhar cada ação.</p>
+        <ul class="hero__facts" aria-label="Características da equipe"><li>Trabalho em rede</li><li>Formação prática</li><li>Impacto comunitário</li></ul>
+      </div>
+    </section>
 
-            <button class="menu-hamburguer" aria-label="Abrir menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <section class="section section--white team-showcase">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Nossa equipe</p><h2>Encontre as pessoas por função</h2></div><p class="section-heading__copy">Conheça quem coordena e participa de cada projeto do Movimente-se.</p></div>
 
-            <nav class="menu-navegacao">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="index.html">Missão</a></li>
-                    <li><a href="index.html">Projetos</a></li>
-                    <li><a href="equipe.html">Equipe</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                </ul>
-            </nav>
-            <a href="https://linktr.ee/MOVIMENTESEIF" class="botao-cadastrar">Comece Já</a>
+        <div class="team-directory">
+          <div class="team-directory__top">
+            <div><p class="team-directory__title">Diretório do projeto</p><p class="team-directory__hint">Selecione um grupo para conhecer seus integrantes.</p></div>
+            <span class="team-directory__total">21 pessoas</span>
+          </div>
+        <div class="team-tabs" role="tablist" aria-label="Grupos da equipe">
+          <button class="team-tab" id="tab-coordenacao" type="button" role="tab" data-team-tab aria-selected="true" aria-controls="panel-coordenacao">Coordenação <span>4</span></button>
+          <button class="team-tab" id="tab-colaboradores" type="button" role="tab" data-team-tab aria-selected="false" aria-controls="panel-colaboradores" tabindex="-1">Colaboradores <span>5</span></button>
+          <button class="team-tab" id="tab-bolsistas" type="button" role="tab" data-team-tab aria-selected="false" aria-controls="panel-bolsistas" tabindex="-1">Bolsistas <span>7</span></button>
+          <button class="team-tab" id="tab-voluntarios" type="button" role="tab" data-team-tab aria-selected="false" aria-controls="panel-voluntarios" tabindex="-1">Voluntários <span>5</span></button>
         </div>
 
-        <nav class="menu-mobile" id="menu-mobile">
-            <ul>
-                <li><a href="index.html" class="link-mobile">Início</a></li>
-                <li><a href="index.html">Missão</a></li>
-                <li><a href="index.html">Projetos</a></li>
-                <li><a href="equipe.html" class="link-mobile">Equipe</a></li>
-                <li><a href="sobre.html" class="link-mobile">Sobre</a></li>
-                <li><a href="https://linktr.ee/MOVIMENTESEIF" class="botao-cadastrar">Comece Já</a></li>
-            </ul>
-        </nav>
-
-        <div class="menu-overlay"></div>
-
-    </header>
-
-    <main>
-        <section id="capa-inicial">
-            <div class="carrossel">
-                <div class="slide ativo" style="background-image: url('assets/Projetos/capa-equipe.jpeg');">
-                </div>
-                <div class="slide" style="background-image: url('assets/Projetos/corrida0.jpg');">
-                </div>
-                <div class="slide" style="background-image: url('assets/Projetos/adolescentes.jpg');">
-                </div>
-            </div>
-            <div class="overlay"></div>
-            <div class="container conteudo-capa animar-scroll">
-                <h1>Nossa Equipe</h1>
-                <p style="color: #ecf0f1;">Conheça os profissionais dedicados que tornam o Movimente-se possível</p>
-            </div>
+        <section class="team-panel" id="panel-coordenacao" role="tabpanel" data-team-panel aria-labelledby="tab-coordenacao" tabindex="0">
+          <div class="team-grid">
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/09 - Mauro Mazini.webp" alt="Mauro Mazini" width="640" height="640" loading="lazy"><div class="person-card__body"><h3>Mauro Mazini</h3><p class="person-card__role">Coordenação geral</p><p class="person-card__projects"><strong>Projetos:</strong> Servidores na Vibe da Areia, Na Vibe da Areia e Treinamento Multicomponente para Idosos</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/10 - Alex Fernandes.webp" alt="Alex Fernandes" width="670" height="1280" loading="lazy"><div class="person-card__body"><h3>Alex Fernandes</h3><p class="person-card__role">Coordenador</p><p class="person-card__projects"><strong>Projeto:</strong> Xeque-Mate</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/11 - Juliana Vanir.webp" alt="Juliana Vanir" width="840" height="1120" loading="lazy"><div class="person-card__body"><h3>Juliana Vanir</h3><p class="person-card__role">Coordenadora</p><p class="person-card__projects"><strong>Projetos:</strong> Esportes Coletivos e Passos de Resiliência</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/12 - Leandro Borges.webp" alt="Leandro Borges" width="720" height="1280" loading="lazy"><div class="person-card__body"><h3>Leandro Borges</h3><p class="person-card__role">Coordenador</p><p class="person-card__projects"><strong>Projeto:</strong> Na Resistência da Mola</p></div></article>
+          </div>
         </section>
 
-        <!-- SEÇÃO COORDENADORES GERAIS -->
-        <section class="secao">
-            <div class="container">
-                <div class="titulo-secao animar-scroll">
-                    <h2>Coordenador Geral</h2>
-                    <p>Liderança e visão que guiam todos os nossos projetos</p>
-                </div>
-
-                <div class="modern-card">
-                    <div class="card-header-accent"></div>
-
-                    <div class="photo-container">
-                        <img src="assets/equipe/coordenadores/mauro.jpg" alt="Mauro" class="profile-image">
-                    </div>
-
-                    <div class="card-content">
-                        <span class="job-title">Coordenadora Geral</span>
-
-                        <h1 class="person-name">Mauro Mazini Filho</h1>
-
-                        <ul class="qualifications-list">
-                            <li>Professor EBTT do IF Sudeste MG - Campus Cataguases e Coordenação de Extensão desse
-                                Campus e do Movimente-se</li>
-                            <li>Doutorado em Educação Física - (UFJF)</li>
-                            <li>Mestrado em Educação Física e Desporto (UTAD - Portugal)</li>
-                            <li>Licenciado e bacharel em Educação Física - (UNIPAC)</li>
-                            <li>Licenciado em Pedagogia - (Intervale)</li>
-                            <li>Bacharel em Nutrição - (Claretiano)</li>
-                            <li>Tecnólogo em Gerontologia - (Claretiano).</li>
-                            <li>Personal Trainer e Prescrição de Exercícios para Grupos Especiais.</li>
-                        </ul>
-
-                        <a href="http://lattes.cnpq.br/9202192613935219" target="_blank" class="lattes-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="lattes-icon">
-                                <path
-                                    d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M13,13V18H10V13H13Z" />
-                            </svg>
-                            Currículo Lattes
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <section class="team-panel" id="panel-colaboradores" role="tabpanel" data-team-panel aria-labelledby="tab-colaboradores" hidden tabindex="0">
+          <div class="team-grid">
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/14 - Helena Paiva.webp" alt="Helena Paiva" width="756" height="910" loading="lazy"><div class="person-card__body"><h3>Helena Paiva</h3><p class="person-card__role">Colaboradora externa</p><p class="person-card__projects"><strong>Projetos:</strong> Servidores na Vibe da Areia e Na Vibe da Areia</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/17 - Joecy Campos.webp" alt="Joecy Campos" width="775" height="986" loading="lazy"><div class="person-card__body"><h3>Joecy Campos</h3><p class="person-card__role">Colaborador externo</p><p class="person-card__projects"><strong>Projeto:</strong> Na Resistência da Mola</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/18 - Jonathan Bianchi.webp" alt="Jonathan Bianchi" width="800" height="800" loading="lazy"><div class="person-card__body"><h3>Jonathan Bianchi</h3><p class="person-card__role">Colaborador externo</p><p class="person-card__projects"><strong>Projeto:</strong> Treinamento Multicomponente para Idosos</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/20 - Marco Túlio.webp" alt="Marco Túlio Ribeiro" width="760" height="1015" loading="lazy"><div class="person-card__body"><h3>Marco Túlio Ribeiro</h3><p class="person-card__role">Colaborador externo</p><p class="person-card__projects"><strong>Projeto:</strong> Esportes Coletivos</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/22 - Ricardo Nunes.webp" alt="Ricardo Nunes" width="800" height="1200" loading="lazy"><div class="person-card__body"><h3>Ricardo Nunes</h3><p class="person-card__role">Colaborador externo</p><p class="person-card__projects"><strong>Projeto:</strong> Passos de Resiliência</p></div></article>
+          </div>
         </section>
 
-
-
-
-        <!-- SEÇÃO PASSOS DE RESILIÊNCIA -->
-        <section class="secao secao-alternativa">
-            <div class="container">
-                <div class="titulo-secao animar-scroll">
-                    <h2><i class="fa-solid fa-person-running"></i> Passos de Resiliência</h2>
-                    <p>Equipe dedicada ao movimento e superação de desafios pessoais</p>
-                </div>
-
-                <div class="grid-equipe">
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/colaboradores/ricardo-nunes.png" class="card-imagem"
-                            style="object-position: 50% 16%;  height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Ricardo Nunes</h3>
-                            <p class="cargo-equipe">Colaborador do Projeto</p>
-                            <p>Realiza o programa de caminhadas e corridas, promovendo saúde cardiovascular,
-                                resiliência e superação de desafios.</p>
-                            <div class="badge-funcao">Colaborador</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/coordenadores/tarcisio.png" class="card-imagem"
-                            style="object-position: 50% 25%;  height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Tarcísio Brum</h3>
-                            <p class="cargo-equipe">Coordenador do Projeto</p>
-                            <p>Coordena a visão geral do projeto Movimente-se - Passos de Resiliência</p>
-                            <div class="badge-funcao">Coordenador</div>
-                        </div>
-                    </article>
-
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/bolsistas/maycon.jpeg" alt="Maycon Lopes" class="card-imagem"
-                            style="object-position: 50% 100%;  height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Maycon Lopes</h3>
-                            <p class="cargo-equipe">Bolsista</p>
-                            <p>Apoia as atividades práticas e auxilia na organização de eventos e acompanhamento dos
-                                participantes.</p>
-                            <div class="badge-funcao">Bolsista</div>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
+        <section class="team-panel" id="panel-bolsistas" role="tabpanel" data-team-panel aria-labelledby="tab-bolsistas" hidden tabindex="0">
+          <div class="team-grid">
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/01 - Artur Medeiros.webp" alt="Artur Medeiros" width="840" height="1120" loading="lazy"><div class="person-card__body"><h3>Artur Medeiros</h3><p class="person-card__role">Bolsista</p><p class="person-card__projects"><strong>Projeto:</strong> Servidores na Vibe da Areia</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/02 - Isabela Ribero.webp" alt="Isabela Ribero" width="840" height="1120" loading="lazy"><div class="person-card__body"><h3>Isabela Ribero</h3><p class="person-card__role">Bolsista</p><p class="person-card__projects"><strong>Projeto:</strong> Treinamento Multicomponente para Idosos</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/04 - Maycon Lopes.webp" alt="Maycon Lopes" width="840" height="1120" loading="lazy"><div class="person-card__body"><h3>Maycon Lopes</h3><p class="person-card__role">Bolsista</p><p class="person-card__projects"><strong>Projeto:</strong> Passos de Resiliência</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/05 - Sarah Vitória.webp" alt="Sarah Vitória" width="768" height="1024" loading="lazy"><div class="person-card__body"><h3>Sarah Vitória</h3><p class="person-card__role">Bolsista</p><p class="person-card__projects"><strong>Projeto:</strong> Esportes Coletivos</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/06 - Sabrina de Souza.webp" alt="Sabrina de Souza" width="720" height="1280" loading="lazy"><div class="person-card__body"><h3>Sabrina de Souza</h3><p class="person-card__role">Bolsista</p><p class="person-card__projects"><strong>Projeto:</strong> Xeque-Mate</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/07 - Tomaz Augusto.webp" alt="Tomaz Augusto" width="840" height="1120" loading="lazy"><div class="person-card__body"><h3>Tomaz Augusto</h3><p class="person-card__role">Bolsista</p><p class="person-card__projects"><strong>Projeto:</strong> Xeque-Mate</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/08 - Weislla Fernanda.webp" alt="Weislla Fernanda" width="788" height="957" loading="lazy"><div class="person-card__body"><h3>Weislla Fernanda</h3><p class="person-card__role">Bolsista</p><p class="person-card__projects"><strong>Projeto:</strong> Na Resistência da Mola</p></div></article>
+          </div>
         </section>
 
-
-
-
-
-        <!-- SEÇÃO TREINAMENTO MULTICOMPONENTE PARA IDOSOS -->
-        <section class="secao">
-            <div class="container">
-                <div class="titulo-secao animar-scroll">
-                    <h2><i class="fa-solid fa-heart-pulse"></i> Treinamento Multicomponente para Idosos</h2>
-                    <p>Equipe especializada em bem-estar integral e autonomia</p>
-                </div>
-
-                <div class="grid-equipe">
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/coordenadores/mauro.jpg" alt="Mauro Mazini Filho" class="card-imagem"
-                            style="object-position: 50% 100%; height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Mauro Mazini Filho</h3>
-                            <p class="cargo-equipe">Coordenador Geral</p>
-                            <p>Coordena a visão geral do projeto e também os projetos Na Vibe da Areia e Treinamento
-                                Multicomponente para Idosos.</p>
-                            <div class="badge-funcao">Coordenador Geral</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/colaboradores/jonathan_bianchi.png" alt="Jonathan Bianchi"
-                            class="card-imagem" style="object-position: 50% 0%;  height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Jonathan Bianchi</h3>
-                            <p class="cargo-equipe">Colaborador Externo</p>
-                            <p>Realiza o programa de exercícios físicos e cognitivos para idosos, focando em autonomia
-                                e qualidade de vida.</p>
-                            <div class="badge-funcao">Colaborador Externo</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/colaboradores/dayevillyn-da-silva.jpeg" alt="dayevillyn-da-silva"
-                            class="card-imagem" style="object-position: 50% 20%;  height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Dayevillyn da Silva Fidelis Ribeiro</h3>
-                            <p class="cargo-equipe">Profissional</p>
-                            <p>Traz expertise externa e auxilia na implementação de técnicas inovadoras de treinamento
-                                multicomponente.</p>
-                            <div class="badge-funcao">Profissional</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/colaboradores/maristela_abritta.jpeg" class="card-imagem"
-                            style="object-position: 50% 30%; height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Maristela Abritta Aguiar Xavier</h3>
-                            <p class="cargo-equipe">Voluntária de Educação Física</p>
-                            <p>Oferece suporte nas aulas práticas e acompanhamento dos participantes idosos.</p>
-                            <div class="badge-funcao">Voluntário</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/bolsistas/mariana_mendonca.jpeg" alt="Mariana Mendonça Martins"
-                            class="card-imagem" style="object-position: 50% 40%; height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Mariana Mendonça Martins</h3>
-                            <p class="cargo-equipe">Bolsista</p>
-                            <p>Acompanha o desenvolvimento dos participantes e coleta dados para análise de impacto do
-                                programa.</p>
-                            <div class="badge-funcao">Bolsista</div>
-                        </div>
-                    </article>
-                </div>
-            </div>
+        <section class="team-panel" id="panel-voluntarios" role="tabpanel" data-team-panel aria-labelledby="tab-voluntarios" hidden tabindex="0">
+          <div class="team-grid">
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/03 - Luísa Gazolla.webp" alt="Luísa Gazolla de Carvalho" width="761" height="1014" loading="lazy"><div class="person-card__body"><h3>Luísa Gazolla de Carvalho</h3><p class="person-card__role">Voluntária</p><p class="person-card__projects"><strong>Projeto:</strong> Na Vibe da Areia</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/15 - Murilo Henrique.webp" alt="Murilo Henrique" width="840" height="1120" loading="lazy"><div class="person-card__body"><h3>Murilo Henrique</h3><p class="person-card__role">Voluntário</p><p class="person-card__projects"><strong>Projeto:</strong> Servidores na Vibe da Areia</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/16 - Tatiane Roberta.webp" alt="Tatiane Roberta" width="840" height="1120" loading="lazy"><div class="person-card__body"><h3>Tatiane Roberta</h3><p class="person-card__role">Voluntária</p><p class="person-card__projects"><strong>Projeto:</strong> Na Vibe da Areia</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/19 - Maristela Abritta.webp" alt="Maristela Abritta" width="720" height="1280" loading="lazy"><div class="person-card__body"><h3>Maristela Abritta</h3><p class="person-card__role">Voluntária</p><p class="person-card__projects"><strong>Projeto:</strong> Treinamento Multicomponente para Idosos</p></div></article>
+            <article class="person-card"><img src="assets/optimized/fotos_equipe/21 - Rhaiane Melo.webp" alt="Rhaiane Melo" width="746" height="1303" loading="lazy"><div class="person-card__body"><h3>Rhaiane Melo</h3><p class="person-card__role">Voluntária</p><p class="person-card__projects"><strong>Projeto:</strong> Esportes Coletivos</p></div></article>
+          </div>
         </section>
-
-        <!-- SEÇÃO SERVIDORES NA VIBE DA AREIA -->
-        <section class="secao secao-alternativa">
-            <div class="container">
-                <div class="titulo-secao animar-scroll">
-                    <h2><i class="fa-solid fa-volleyball"></i> Servidores na Vibe da Areia</h2>
-                    <p>Equipe dedicada ao lazer e integração dos servidores</p>
-                </div>
-
-                <div class="grid-equipe">
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/colaboradores/helena.png" alt="Helena Paiva Gê" class="card-imagem"
-                            style="object-position: 50% 20%;  height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Helena Paiva Gê</h3>
-                            <p class="cargo-equipe">Colaborador Externo</p>
-                            <p>Realiza o programa de Beach Tennis, promovendo integração social e estilo de vida ativo.
-                            </p>
-                            <div class="badge-funcao">Colaborador Externo</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/colaboradores/murilo_henrique.jpeg" alt="Murilo Alves"
-                            class="card-imagem" style="object-position: 50% 70%;  height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Murilo Alves</h3>
-                            <p class="cargo-equipe">Voluntário de Educação Física</p>
-                            <p>Auxilia nas aulas e treinos de Beach Tennis, garantindo qualidade técnica e segurança.
-                            </p>
-                            <div class="badge-funcao">Voluntário</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/bolsistas/artur_medeiros.jpg" alt="Artur Medeiros Fernandes"
-                            class="card-imagem" style="object-position: 50% 20%;  height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Artur Medeiros Fernandes</h3>
-                            <p class="cargo-equipe">Bolsista</p>
-                            <p>Organiza eventos, gerencia inscrições e acompanha a participação de servidores nas
-                                atividades.</p>
-                            <div class="badge-funcao">Bolsista</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/coordenadores/guilherme.jpeg" alt="Colaborador" class="card-imagem"
-                            style="object-position: 50% 20%;  height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Guilherme</h3>
-                            <p class="cargo-equipe">Coordenador</p>
-                            <p>Coordena a visão geral do projeto Movimente-se - Servidores na Vibe da Areia.</p>
-                            <div class="badge-funcao">Coordenador</div>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO NA RESISTÊNCIA DA MOLA -->
-        <section class="secao">
-            <div class="container">
-                <div class="titulo-secao animar-scroll">
-                    <h2><i class="fa-solid fa-spa"></i> Na Resistência da Mola</h2>
-                    <p>Equipe especializada em Pilates e bem-estar</p>
-                </div>
-
-                <div class="grid-equipe">
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/coordenadores/Arthur_Gabriel.jpeg" alt="Arthur Gabriel Guedes Rocha"
-                            class="card-imagem" style="object-position: 50% 10%; height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Arthur Gabriel Guedes Rocha</h3>
-                            <p class="cargo-equipe">Coordenador Especial</p>
-                            <p>Coordena a visão geral do projeto Movimente-se - Na Resistência da Mola.</p>
-                            <div class="badge-funcao">Coordenador</div>
-
-                        </div>
-                    </article>
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/colaboradores/joecy.jpeg" alt="Joecy de Almeida Campos"
-                            class="card-imagem" style="object-position: 50% 70%; height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Joecy de Almeida Campos</h3>
-                            <p class="cargo-equipe">Coordenador do Projeto</p>
-                            <p>Coordena o programa de Pilates para servidores, melhorando postura, flexibilidade e
-                                oferecendo pausa restauradora.</p>
-                            <div class="badge-funcao">Colaborador Externo</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/colaboradores/isabella_pires.jpeg" alt="Isabella Pires Guidini"
-                            class="card-imagem" style="object-position: 50% 3%; height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Isabella Pires Guidini</h3>
-                            <p class="cargo-equipe">Auxiliar do Colaborador Externo</p>
-                            <p>Suporta a implementação das técnicas de Pilates e auxilia no acompanhamento personalizado
-                                dos participantes.</p>
-                            <div class="badge-funcao">Profissional</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/colaboradores/thays_karen.jpeg" alt="Thays Karen Miranda da Silva"
-                            class="card-imagem" style="object-position: 50% 10%; height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Thays Karen Miranda da Silva</h3>
-                            <p class="cargo-equipe">Auxiliar do Colaborador Externo</p>
-                            <p>Auxilia na organização das aulas e oferece suporte técnico na prática de Pilates dos
-                                servidores.</p>
-                            <div class="badge-funcao">Profissional</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/bolsistas/ww.jpeg" alt="Weislla Fernanda da Cruz Tomazeto"
-                            class="card-imagem" style="object-position: 50% 2%; object-fit: cover; height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Weislla Fernanda da Cruz Tomazeto</h3>
-                            <p class="cargo-equipe">Bolsista</p>
-                            <p>Acompanha os participantes e coleta dados sobre impacto do programa na saúde e bem-estar
-                                dos servidores.</p>
-                            <div class="badge-funcao">Bolsista</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/colaboradores/rubens.jpeg" alt="Rubens" class="card-imagem"
-                            style="object-position: 50% 30%; height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Rubens</h3>
-                            <p class="cargo-equipe">Auxiliar do Colaborador Externo</p>
-                            <p>Oferece suporte nas aulas de Pilates e auxilia na orientação individual dos servidores
-                                participantes.</p>
-                            <div class="badge-funcao">Profissional</div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO NA VIBE DA AREIA - ADOLESCENTES -->
-        <section class="secao secao-alternativa">
-            <div class="container">
-                <div class="titulo-secao animar-scroll">
-                    <h2><i class="fa-solid fa-person-hiking"></i> Na Vibe da Areia - Adolescentes</h2>
-                    <p>Equipe dedicada ao desenvolvimento através do Beach Tênis</p>
-                </div>
-
-
-
-                <div class="grid-equipe">
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/coordenadores/mauro.jpg" alt="Mauro Mazini Filho" class="card-imagem"
-                            style="object-position: 50% 100%; height: 350px;">
-                        <div class="card-conteudo">
-                            <h3>Mauro Mazini Filho</h3>
-                            <p class="cargo-equipe">Coordenador Geral</p>
-                            <p>Coordena a visão geral do projeto e também os projetos Na Vibe da Areia e Treinamento
-                                Multicomponente para Idosos.</p>
-                            <div class="badge-funcao">Coordenador Geral</div>
-                        </div>
-                    </article>
-
-
-
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/colaboradores/helena.png" alt="Helena Paiva Gê" class="card-imagem"
-                            style="object-position: 50% 20%; height: 350px;">
-                        <div class="card-conteudo">
-                            <h3>Helena Paiva Gê</h3>
-                            <p class="cargo-equipe">Coordenadora do Projeto</p>
-                            <p>Realiza o programa de Beach Tênis para adolescentes, focando em lazer ativo, inclusão
-                                social e desenvolvimento motor.</p>
-                            <div class="badge-funcao">Coordenação</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/bolsistas/ariani_soares.jpeg" alt="Ariani Soares de Souza Teodoro"
-                            class="card-imagem" style="object-position: 50% 26%; height: 350px;">
-                        <div class="card-conteudo">
-                            <h3>Ariani Soares de Souza Teodoro</h3>
-                            <p class="cargo-equipe">Bolsista</p>
-                            <p>Auxilia na condução das aulas práticas e acompanha o desenvolvimento dos adolescentes
-                                participantes do projeto.</p>
-                            <div class="badge-funcao">Bolsista</div>
-                        </div>
-                    </article>
-
-
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO AGILIDADE EM MOVIMENTO -->
-        <section class="secao">
-            <div class="container">
-                <div class="titulo-secao animar-scroll">
-                    <h2><i class="fa-solid fa-gamepad"></i> Agilidade em Movimento - Tênis de Mesa</h2>
-                    <p>Equipe especializada em desenvolvimento cognitivo e integração</p>
-                </div>
-
-                <div class="grid-equipe">
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/colaboradores/aldaberto.png" alt="Bernardo" class="card-imagem"
-                            style="object-position: 50% 0%; height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Adalberto Ferraz Lima</h3>
-                            <p class="cargo-equipe">COLABORADOR EXTERNO</p>
-                            <p>Oferece treinamento técnico especializado em Tênis de Mesa e orienta sobre estratégias de
-                                jogo.</p>
-                            <div class="badge-funcao">Colaborador externo</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/coordenadores/alex_fernandes.jpeg" alt="Instrutor Técnico"
-                            class="card-imagem" style="object-position: 50% 11%; height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Alex Fernandes da Veiga</h3>
-                            <p class="cargo-equipe">Coordenador</p>
-                            <p>Coordena a visão geral do projeto Movimente-se -  Agilidade em Movimento.</p>
-                            <div class="badge-funcao">Coordenador</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/bolsistas/bernardo.png" alt="Assistente" class="card-imagem"
-                            style="object-position: 50% 32%; height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Bernardo Batista de Souza</h3>
-                            <p class="cargo-equipe">Voluntário de Apoio</p>
-                            <p>Auxilia na organização do projeto.</p>
-                            <div class="badge-funcao">Voluntário</div>
-                        </div>
-                    </article>
-
-                    <article class="card animar-scroll">
-                        <img src="assets/equipe/bolsistas/emanuel.jpg" alt="Assistente" class="card-imagem"
-                            style="object-position: 50% 30%; height: 300px;">
-                        <div class="card-conteudo">
-                            <h3>Emanuel Afonso Abritta</h3>
-                            <p class="cargo-equipe">Voluntário de Apoio</p>
-                            <p>Auxilia na condução das aulas práticas e acompanha o desenvolvimento dos adolescentes
-                                participantes do projeto.</p>
-                            <div class="badge-funcao">Voluntário</div>
-                        </div>
-                    </article>
-
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="rodape">
-        <div class="container grid-rodape">
-            <div class="coluna-rodape">
-                <h3>Movimente-se</h3>
-                <p>Unindo ensino, pesquisa e extensão para transformar vidas através do movimento.</p>
-                <p>Entre em contato conosco: <a href="mailto:movimenteseif@gmail.com">movimenteseif@gmail.com</a></p>
-            </div>
-            <div class="coluna-rodape">
-                <h3>Siga-nos</h3>
-                <div class="redes-sociais">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
-                        <a href="#" aria-label="Facebook"
-                            style="color: #1877f2; font-size: 20px; text-decoration: none;">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <span
-                            style="font-family: Arial, sans-serif; font-size: 14px; color: #ecf0f1;">@movimentese_if</span>
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <a href="#" aria-label="Instagram"
-                            style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 20px; text-decoration: none;">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <span
-                            style="font-family: Arial, sans-serif; font-size: 14px; color: #ecf0f1;">@movimentese_if</span>
-                    </div>
-                </div>
-            </div>
-            <div class="coluna-rodape">
-                <h3>Novidades</h3>
-                <p>Receba dicas e novidades direto no seu e-mail!</p>
-                <form id="formulario-newsletter">
-                    <input type="email" id="email-newsletter" placeholder="Seu melhor e-mail" required>
-                    <button type="submit" class="botao-inscrever">Inscrever-se</button>
-                    <p id="feedback-newsletter" class="feedback-form"></p>
-                </form>
-            </div>
+        <p class="team-note">Composição organizada conforme o cadastro da equipe e a distribuição atual dos projetos Movimente-se.</p>
         </div>
-        <div class="copyright">
-            <p>&copy; 2025 Movimente-se. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+      </div>
+    </section>
 
-    <button id="toggle-tema" aria-label="Alternar tema">
-        🌙
-    </button>
+    <section class="cta-band" aria-labelledby="cta-title"><div class="container cta-band__inner"><div><h2 id="cta-title">Quer colaborar com o Movimente-se?</h2><p>Converse com a equipe sobre voluntariado, apoio técnico, espaços e parcerias institucionais.</p></div><div class="cta-band__actions"><a class="button button--primary" href="mailto:movimenteseif@gmail.com?subject=Quero%20colaborar%20com%20o%20Movimente-se">Falar com a equipe</a><a class="button button--outline" href="sobre.html">Conhecer o projeto</a></div></div></section>
+  </main>
 
-    <script src="js/script.js"></script>
-
+  <footer class="site-footer" id="contato"><div class="container"><div class="footer-grid"><div><h2>Movimente-se</h2><p>Extensão do IF Sudeste MG — Campus Avançado Cataguases, conectando educação, saúde, esporte e comunidade.</p></div><div><h3>Navegação</h3><ul class="footer-links"><li><a href="index.html">Início</a></li><li><a href="atividades.html">Atividades</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Links oficiais</a></li></ul></div><div class="footer-contact"><h3>Contato</h3><a href="mailto:movimenteseif@gmail.com">movimenteseif@gmail.com</a><span>Cataguases, Minas Gerais</span><span>@movimentese_if</span></div></div><div class="footer-bottom"><span>© <span data-current-year>2026</span> Movimente-se.</span><span>Projeto público, gratuito e inclusivo.</span></div></div></footer>
 </body>
-
 </html>

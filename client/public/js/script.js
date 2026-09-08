@@ -1,173 +1,222 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const cabecalho = document.getElementById('cabecalho');
+(() => {
+  try {
+    const savedTheme = localStorage.getItem("movimente-se-theme");
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.dataset.theme = savedTheme || systemTheme;
+  } catch {
+    document.documentElement.dataset.theme = "light";
+  }
+})();
 
-    // --- Efeito do Cabeçalho ao Rolar ---
-    window.addEventListener('scroll', () => {
-        cabecalho.classList.toggle('rolado', window.scrollY > 50);
+document.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("pageshow", () => document.documentElement.classList.remove("page-leaving"));
+  const themeButtons = [...document.querySelectorAll(".theme-toggle")];
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+
+  function updateThemeControls() {
+    const isDark = document.documentElement.dataset.theme === "dark";
+    const action = isDark ? "Ativar tema claro" : "Ativar tema escuro";
+    themeButtons.forEach((button) => {
+      button.setAttribute("aria-label", action);
+      button.setAttribute("title", action);
+      button.setAttribute("aria-pressed", String(isDark));
     });
+    themeColor?.setAttribute("content", isDark ? "#0B1512" : "#176B4A");
+  }
 
-    // --- Carrossel da Capa Inicial ---
-    const slides = document.querySelectorAll('.slide');
-    let slideAtual = 0;
-    if (slides.length > 0) {
-        setInterval(() => {
-            slides[slideAtual].classList.remove('ativo');
-            slideAtual = (slideAtual + 1) % slides.length;
-            slides[slideAtual].classList.add('ativo');
-        }, 5000);
+  function setTheme(theme, persist = true) {
+    document.documentElement.dataset.theme = theme;
+    if (persist) {
+      try { localStorage.setItem("movimente-se-theme", theme); } catch { /* Preferência apenas nesta página. */ }
     }
+    updateThemeControls();
+  }
 
-    // --- Rolagem Suave para Links Internos ---
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const id = this.getAttribute('href');
-            const elementoAlvo = document.querySelector(id);
-            if (elementoAlvo) {
-                const offset = cabecalho.offsetHeight;
-                const posicao = elementoAlvo.getBoundingClientRect().top + window.pageYOffset - offset;
-                window.scrollTo({ top: posicao, behavior: "smooth" });
-            }
-        });
+  themeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      setTheme(nextTheme);
     });
+  });
+  updateThemeControls();
 
-    // --- Animação de Elementos ao Rolar (Intersection Observer) ---
-    const observer = new IntersectionObserver((entradas, observer) => {
-        entradas.forEach(entrada => {
-            if (entrada.isIntersecting) {
-                entrada.target.classList.add('visivel');
-                observer.unobserve(entrada.target);
-            }
-        });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.animar-scroll').forEach(el => observer.observe(el));
+  const menuButton = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
+  const backdrop = document.querySelector(".menu-backdrop");
+  const siteHeader = document.querySelector(".site-header");
+  const menuBackground = [...document.querySelectorAll("main, .site-footer, .site-header .brand, .site-header .theme-toggle, .site-header .header-cta")];
+  let previouslyFocused = null;
 
-    // --- Contador Animado para Estatísticas ---
-    const animarContador = (contador) => {
-        const alvo = +contador.getAttribute('data-alvo');
-        const duracao = 2000; // 2 segundos
-        const passo = alvo / (duracao / 16); // ~60fps
+  let headerFrameRequested = false;
+  function updateHeaderState() {
+    siteHeader?.classList.toggle("is-scrolled", window.scrollY > 12);
+    headerFrameRequested = false;
+  }
+  updateHeaderState();
+  window.addEventListener("scroll", () => {
+    if (headerFrameRequested) return;
+    headerFrameRequested = true;
+    window.requestAnimationFrame(updateHeaderState);
+  }, { passive: true });
 
-        let contagem = 0;
-        const atualizarContagem = () => {
-            contagem += passo;
-            if (contagem < alvo) {
-                if (contador.classList.contains('contador-porcentagem')) {
-                    contador.innerText = Math.ceil(contagem) + '%';
-                } else {
-                    contador.innerText = Math.ceil(contagem).toLocaleString('pt-BR');
-                }
-                requestAnimationFrame(atualizarContagem);
-            } else {
-                if (contador.classList.contains('contador-porcentagem')) {
-                    contador.innerText = alvo + '%';
-                } else {
-                    contador.innerText = alvo.toLocaleString('pt-BR');
-                }
-            }
-        };
-        requestAnimationFrame(atualizarContagem);
-    };
+  const focusableMenuItems = () => nav && menuButton
+    ? [...nav.querySelectorAll('a[href], button:not([disabled])'), menuButton]
+    : [];
 
-    const contadorObserver = new IntersectionObserver((entradas, observer) => {
-        entradas.forEach(entrada => {
-            if (entrada.isIntersecting) {
-                animarContador(entrada.target);
-                observer.unobserve(entrada.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    document.querySelectorAll('.contador, .contador-porcentagem').forEach(c => contadorObserver.observe(c));
+  function setMenuBackgroundInert(inert) {
+    menuBackground.forEach((element) => { element.inert = inert; });
+  }
 
-    const botaoTema = document.getElementById("toggle-tema");
+  function openMenu() {
+    if (!menuButton || !nav || !backdrop) return;
+    previouslyFocused = document.activeElement;
+    menuButton.setAttribute("aria-expanded", "true");
+    menuButton.setAttribute("aria-label", "Fechar menu");
+    nav.classList.add("is-open");
+    backdrop.classList.add("is-open");
+    document.body.classList.add("menu-open");
+    setMenuBackgroundInert(true);
+    focusableMenuItems()[0]?.focus();
+  }
 
+  function closeMenu({ restoreFocus = true } = {}) {
+    if (!menuButton || !nav || !backdrop) return;
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Abrir menu");
+    nav.classList.remove("is-open");
+    backdrop.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+    setMenuBackgroundInert(false);
+    if (restoreFocus) previouslyFocused?.focus();
+  }
 
-    // Verifica o tema salvo
-    if (localStorage.getItem("tema") === "escuro") {
-        document.body.classList.add("modo-escuro");
-        botaoTema.textContent = "☀️";
+  menuButton?.addEventListener("click", () => {
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  backdrop?.addEventListener("click", () => closeMenu());
+  nav?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => closeMenu({ restoreFocus: false }));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav?.classList.contains("is-open")) {
+      closeMenu();
+      return;
     }
 
-    botaoTema.addEventListener("click", () => {
-        document.body.classList.toggle("modo-escuro");
-        const estaEscuro = document.body.classList.contains("modo-escuro");
+    if (event.key !== "Tab" || !nav?.classList.contains("is-open")) return;
+    const items = focusableMenuItems();
+    if (!items.length) return;
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
 
-        botaoTema.textContent = estaEscuro ? "☀️" : "🌙";
-        localStorage.setItem("tema", estaEscuro ? "escuro" : "claro");
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 960 && nav?.classList.contains("is-open")) {
+      closeMenu({ restoreFocus: false });
+    }
+  });
+
+  const pageTransitionLinks = [...document.querySelectorAll("a[href]")].filter((link) => {
+    if (link.target === "_blank" || link.hasAttribute("download")) return false;
+    const destination = new URL(link.href, window.location.href);
+    return destination.origin === window.location.origin
+      && destination.pathname.endsWith(".html")
+      && destination.pathname !== window.location.pathname;
+  });
+
+  pageTransitionLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      document.documentElement.classList.add("page-leaving");
+      window.setTimeout(() => window.location.assign(link.href), 180);
     });
+  });
 
-    // Selecionando os elementos
-    const modal = document.getElementById("meuModal");
-    const btn = document.getElementById("btnContato");
-    const span = document.getElementsByClassName("fechar-modal")[0];
+  const tabs = [...document.querySelectorAll("[role='tab'][data-team-tab]")];
+  const panels = [...document.querySelectorAll("[role='tabpanel'][data-team-panel]")];
 
-    // Quando clicar no botão, abre o modal
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    // Quando clicar no "X", fecha o modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    // Quando clicar fora da caixa do modal, também fecha
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Seleciona os elementos baseados nas classes do seu CSS
-    const btnMenu = document.querySelector('.menu-hamburguer');
-    const menu = document.querySelector('.menu-mobile');
-    const overlay = document.querySelector('.menu-overlay');
-    
-    // Seleciona todos os links dentro do menu mobile (incluindo o botão de destaque)
-    const linksMenu = document.querySelectorAll('.menu-mobile a');
-
-    // Função que abre ou fecha o menu
-    function toggleMenu() {
-        // A classe 'ativo' é a chave que conecta com o seu CSS
-        const estaAtivo = menu.classList.contains('ativo');
-
-        if (estaAtivo) {
-            fecharMenu();
-        } else {
-            abrirMenu();
-        }
-    }
-
-    function abrirMenu() {
-        btnMenu.classList.add('ativo');
-        menu.classList.add('ativo');
-        overlay.classList.add('ativo');
-        
-        // (Opcional) Trava a rolagem do corpo do site
-        document.body.style.overflow = 'hidden'; 
-    }
-
-    function fecharMenu() {
-        btnMenu.classList.remove('ativo');
-        menu.classList.remove('ativo');
-        overlay.classList.remove('ativo');
-        
-        // (Opcional) Destrava a rolagem do corpo do site
-        document.body.style.overflow = 'auto';
-    }
-
-    // Evento de clique no ícone hamburguer
-    btnMenu.addEventListener('click', toggleMenu);
-
-    // Evento de clique no overlay (fundo escuro)
-    overlay.addEventListener('click', fecharMenu);
-
-    // Evento para fechar o menu ao clicar em qualquer link
-    linksMenu.forEach(link => {
-        link.addEventListener('click', fecharMenu);
+  function selectTeamTab(tab, moveFocus = false) {
+    const panelId = tab.getAttribute("aria-controls");
+    let selectedPanel = null;
+    tabs.forEach((item) => {
+      const selected = item === tab;
+      item.setAttribute("aria-selected", String(selected));
+      item.tabIndex = selected ? 0 : -1;
     });
+    panels.forEach((panel) => {
+      panel.hidden = panel.id !== panelId;
+      if (!panel.hidden) selectedPanel = panel;
+    });
+    window.requestAnimationFrame(() => {
+      selectedPanel?.querySelectorAll(".reveal-ready").forEach((card) => card.classList.add("is-visible"));
+    });
+    if (moveFocus) tab.focus();
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => selectTeamTab(tab));
+    tab.addEventListener("keydown", (event) => {
+      if (!["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+      let nextIndex = index;
+      if (event.key === "ArrowRight" || event.key === "ArrowDown") nextIndex = (index + 1) % tabs.length;
+      if (event.key === "ArrowLeft" || event.key === "ArrowUp") nextIndex = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === "Home") nextIndex = 0;
+      if (event.key === "End") nextIndex = tabs.length - 1;
+      selectTeamTab(tabs[nextIndex], true);
+    });
+  });
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    const revealTargets = [...document.querySelectorAll([
+      ".section-heading",
+      ".activity-card",
+      ".activity-group__header",
+      ".impact-item",
+      ".step",
+      ".info-card",
+      ".split__media",
+      ".institutional-banner",
+      ".timeline article",
+      ".team-directory__top",
+      ".team-tabs",
+      ".person-card",
+      ".cta-band__inner"
+    ].join(","))];
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+    revealTargets.forEach((element) => {
+      const localIndex = [...element.parentElement.children].indexOf(element);
+      element.classList.add("reveal-ready", `reveal-delay-${Math.max(0, localIndex) % 4}`);
+      const bounds = element.getBoundingClientRect();
+      if (element.offsetParent !== null && bounds.top < window.innerHeight * 0.92) {
+        element.classList.add("is-visible");
+      } else {
+        revealObserver.observe(element);
+      }
+    });
+  }
+
+  document.querySelectorAll("[data-current-year]").forEach((item) => {
+    item.textContent = new Date().getFullYear();
+  });
 });

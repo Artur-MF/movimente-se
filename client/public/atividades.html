@@ -1,187 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitalidade Total - Seu Guia de Exercício Físico</title>
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça as atividades gratuitas do projeto Movimente-se em Cataguases.">
+  <meta name="theme-color" content="#176B4A">
+  <meta property="og:title" content="Atividades — Movimente-se">
+  <meta property="og:description" content="Esporte, saúde e lazer para diferentes públicos em Cataguases.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/outros/movimente-se-og.jpg">
+  <title>Atividades — Movimente-se</title>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header" id="cabecalho">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="Movimente-se, página inicial"><img src="assets/optimized/logo.webp" alt="" width="42" height="42"><span>Movimente-se</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li><li><a href="atividades.html" aria-current="page">Atividades</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="equipe.html">Equipe</a></li><li><a href="#contato">Contato</a></li>
+          <li class="mobile-cta-item"><a class="mobile-cta" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Quero participar</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Ativar tema escuro" title="Ativar tema escuro"><span class="theme-toggle__icon theme-toggle__sun" aria-hidden="true">☀</span><span class="theme-toggle__icon theme-toggle__moon" aria-hidden="true">◐</span></button>
+      <a class="button button--primary header-cta" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Quero participar</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="site-nav" aria-expanded="false"><span></span></button>
+    </div>
+    <button class="menu-backdrop" type="button" tabindex="-1" aria-label="Fechar menu"></button>
+  </header>
 
-    <header class="cabecalho" id="cabecalho">
-        <div class="container">
-            <a href="#capa-inicial" class="logo">
-                <i class="fa-solid fa-person-running"></i> Movimente-se
-            </a>
-            <nav class="menu-navegacao">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#estatisticas">Estatísticas</a></li>
-                    <li><a href="#blog">Projetos</a></li>
-                    <li><a href="equipe.html">Equipe</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                </ul>
-            </nav>
-            <a href="https://linktr.ee/MOVIMENTESEIF" class="botao-cadastrar">Comece Já</a>
+  <main id="conteudo" tabindex="-1">
+    <section class="page-hero" aria-labelledby="page-title">
+      <img class="page-hero__media" src="assets/optimized/Projetos/idosos_piscina.webp" srcset="assets/optimized/responsive/480/idosos_piscina.webp 480w, assets/optimized/responsive/800/idosos_piscina.webp 800w, assets/optimized/responsive/1200/idosos_piscina.webp 1200w, assets/optimized/Projetos/idosos_piscina.webp 1600w" sizes="100vw" alt="Participantes em uma atividade coletiva do Movimente-se" width="1600" height="1200" fetchpriority="high">
+      <div class="container page-hero__content"><p class="eyebrow">Catálogo de atividades</p><h1 id="page-title">Um projeto, muitos caminhos para se movimentar</h1><p>Encontre ações para adolescentes, adultos, pessoas idosas, estudantes e servidores. Todas integram saúde, convivência e aprendizagem.</p></div>
+    </section>
+
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-heading section-heading--activities">
+          <div><p class="eyebrow">Conheça as atividades</p><h2 class="activities-title">Atividades do Movimente-se</h2></div>
+          <p class="section-heading__copy">As vagas, horários e locais podem mudar a cada edição. Por isso, os cards direcionam para o canal oficial, onde estão as informações mais recentes.</p>
         </div>
-    </header>
 
-    <main>
-        <section id="capa-inicial">
-            <div class="carrossel">
-                <div class="slide ativo" style="background-image: url('assets/Projetos/idosos_piscina.jpeg');">
-                </div>
-
+        <div class="activity-catalog">
+          <section class="activity-group activity-group--active">
+            <div class="activity-group__header"><span class="activity-group__index">01</span><div><p class="activity-group__kicker">Em andamento</p><h3>Projetos Ativos</h3><p>Iniciativas apresentadas como disponíveis ou em execução no momento.</p></div><span class="activity-group__count">7 projetos</span></div>
+            <div class="card-grid">
+              <article class="activity-card" id="passos">
+                <div class="activity-card__media"><img src="assets/optimized/Projetos/corrida0.webp" srcset="assets/optimized/responsive/480/corrida0.webp 480w, assets/optimized/responsive/800/corrida0.webp 800w, assets/optimized/responsive/1200/corrida0.webp 1200w, assets/optimized/Projetos/corrida0.webp 1600w" sizes="100vw" alt="Grupo participando de caminhada e corrida" width="1600" height="1200" loading="lazy"></div>
+                <div class="activity-card__body"><div class="activity-card__tags"><span class="tag">Maiores de 18 anos</span><span class="tag tag--status">Consulte disponibilidade</span></div><h3>Passos de Resiliência</h3><p>Caminhadas e corridas que incentivam atividade regular, condicionamento físico, saúde emocional e superação gradual.</p><a class="text-link" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Consultar inscrições</a></div>
+              </article>
+              <article class="activity-card" id="idosos">
+                <div class="activity-card__media"><img src="assets/optimized/Projetos/idosos.webp" srcset="assets/optimized/responsive/480/idosos.webp 480w, assets/optimized/responsive/800/idosos.webp 800w, assets/optimized/responsive/1200/idosos.webp 1200w, assets/optimized/Projetos/idosos.webp 1362w" sizes="100vw" alt="Pessoas idosas durante exercício orientado" width="1600" height="901" loading="lazy"></div>
+                <div class="activity-card__body"><div class="activity-card__tags"><span class="tag">Pessoas idosas</span><span class="tag tag--status">Consulte disponibilidade</span></div><h3>Treinamento Multicomponente Para Idosos</h3><p>Exercícios físicos e cognitivos para autonomia, equilíbrio, força, mobilidade, socialização e qualidade de vida.</p><a class="text-link" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Consultar inscrições</a></div>
+              </article>
+              <article class="activity-card" id="vibe">
+                <div class="activity-card__media"><img src="assets/optimized/Projetos/adolescentes.webp" srcset="assets/optimized/responsive/480/adolescentes.webp 480w, assets/optimized/responsive/800/adolescentes.webp 800w, assets/optimized/responsive/1200/adolescentes.webp 1200w, assets/optimized/Projetos/adolescentes.webp 1600w" sizes="100vw" alt="Adolescentes em atividade de beach tennis" width="1600" height="1200" loading="lazy"></div>
+                <div class="activity-card__body"><div class="activity-card__tags"><span class="tag">Adolescentes</span><span class="tag tag--status">Consulte disponibilidade</span></div><h3>Na Vibe da Areia</h3><p>Beach tennis para estudantes de escolas públicas, com foco em coordenação, convivência e lazer ativo.</p><a class="text-link" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Consultar inscrições</a></div>
+              </article>
+              <article class="activity-card" id="servidores-vibe">
+                <div class="activity-card__media"><img src="assets/optimized/Projetos/beach_tennis.webp" srcset="assets/optimized/responsive/480/beach_tennis.webp 480w, assets/optimized/responsive/800/beach_tennis.webp 800w, assets/optimized/responsive/1200/beach_tennis.webp 1200w, assets/optimized/Projetos/beach_tennis.webp 1600w" sizes="100vw" alt="Servidores reunidos em uma quadra de beach tennis" width="1600" height="800" loading="lazy"></div>
+                <div class="activity-card__body"><div class="activity-card__tags"><span class="tag">Servidores</span><span class="tag tag--status">Consulte disponibilidade</span></div><h3>Servidores na Vibe da Areia</h3><p>Beach tennis para servidores, promovendo bem-estar, integração, coordenação motora e lazer ativo.</p><a class="text-link" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Consultar inscrições</a></div>
+              </article>
+              <article class="activity-card" id="resistencia-mola">
+                <div class="activity-card__media"><img src="assets/optimized/Projetos/pilates.webp" srcset="assets/optimized/responsive/480/pilates.webp 480w, assets/optimized/responsive/800/pilates.webp 800w, assets/optimized/responsive/1200/pilates.webp 1200w, assets/optimized/Projetos/pilates.webp 1600w" sizes="100vw" alt="Participantes praticando pilates em aparelhos" width="1600" height="720" loading="lazy"></div>
+                <div class="activity-card__body"><div class="activity-card__tags"><span class="tag">Adultos</span><span class="tag tag--status">Consulte disponibilidade</span></div><h3>Na Resistência da Mola</h3><p>Pilates em aparelhos para desenvolver força, mobilidade, equilíbrio, consciência corporal e qualidade de vida.</p><a class="text-link" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Consultar inscrições</a></div>
+              </article>
+              <article class="activity-card" id="esportes-coletivos">
+                <div class="activity-card__media"><img src="assets/optimized/Projetos/esportes_coletivos.webp" srcset="assets/optimized/responsive/480/esportes_coletivos.webp 480w, assets/optimized/responsive/800/esportes_coletivos.webp 800w, assets/optimized/Projetos/esportes_coletivos.webp 1066w" sizes="100vw" alt="Estudante segurando uma bola de basquete durante atividade esportiva" width="1066" height="1600" loading="lazy"></div>
+                <div class="activity-card__body"><div class="activity-card__tags"><span class="tag">Estudantes</span><span class="tag tag--status">Consulte disponibilidade</span></div><h3>Esportes Coletivos</h3><p>Vivências em modalidades coletivas para estimular cooperação, condicionamento, disciplina e convivência.</p><a class="text-link" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Consultar inscrições</a></div>
+              </article>
+              <article class="activity-card" id="xeque-mate">
+                <div class="activity-card__media"><img src="assets/optimized/Projetos/xeque_mate.webp" srcset="assets/optimized/responsive/480/xeque_mate.webp 480w, assets/optimized/responsive/800/xeque_mate.webp 800w, assets/optimized/responsive/1200/xeque_mate.webp 1200w, assets/optimized/Projetos/xeque_mate.webp 1204w" sizes="100vw" alt="Participantes jogando xadrez em sala de aula" width="1204" height="1600" loading="lazy"></div>
+                <div class="activity-card__body"><div class="activity-card__tags"><span class="tag">Alunos</span><span class="tag tag--status">Consulte disponibilidade</span></div><h3>Xeque-Mate</h3><p>Xadrez como ferramenta para exercitar concentração, estratégia, tomada de decisão e socialização.</p><a class="text-link" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Consultar inscrições</a></div>
+              </article>
             </div>
-            <div class="overlay"></div>
-            <div class="container conteudo-capa animar-scroll">
-                <h1>MOVIMENTE-SE</h1>
-                <p style="color: #ecf0f1;">Descubra nossos projetos e veja como fazemos a diferença.</p>
+          </section>
+
+
+
+          <section class="activity-group activity-group--other">
+            <div class="activity-group__header"><span class="activity-group__index">03</span><div><p class="activity-group__kicker">Ações complementares</p><h3>Outras Atividades</h3><p>Formação, gestão e iniciativas que ampliam o alcance do Movimente-se.</p></div><span class="activity-group__count">3 atividades</span></div>
+            <div class="card-grid">
+
+
+              <article class="activity-card">
+                <div class="activity-card__media"><img src="assets/optimized/Projetos/ginastica_elaboral.webp" srcset="assets/optimized/responsive/480/ginastica_elaboral.webp 480w, assets/optimized/responsive/800/ginastica_elaboral.webp 800w, assets/optimized/Projetos/ginastica_elaboral.webp 1080w" sizes="100vw" alt="Ação educativa sobre ergonomia e ginástica laboral" width="1080" height="606" loading="lazy"></div>
+                <div class="activity-card__body"><div class="activity-card__tags"><span class="tag">Ambiente educacional</span><span class="tag tag--status">Ação extensionista</span></div><h3>Ergonomia e Ginástica Laboral</h3><p>Avaliação do ambiente de trabalho, orientação postural, ginástica laboral e produção de boas práticas.</p><a class="text-link" href="mailto:movimenteseif@gmail.com?subject=Ergonomia%20e%20Gin%C3%A1stica%20Laboral">Pedir informações</a></div>
+              </article>
+              <article class="activity-card">
+                <div class="activity-card__media"><img src="assets/optimized/Projetos/extensaoif.webp" srcset="assets/optimized/responsive/480/extensaoif.webp 480w, assets/optimized/responsive/800/extensaoif.webp 800w, assets/optimized/responsive/1200/extensaoif.webp 1200w, assets/optimized/Projetos/extensaoif.webp 1600w" sizes="100vw" alt="Estudantes envolvidos em ação de extensão" width="1600" height="900" loading="lazy"></div>
+                <div class="activity-card__body"><div class="activity-card__tags"><span class="tag">Estudantes</span><span class="tag tag--status">Gestão e extensão</span></div><h3>Gestão e Fortalecimento da Marca</h3><p>Formação prática de estudantes na gestão, comunicação, organização e avaliação das iniciativas do Movimente-se.</p><a class="text-link" href="mailto:movimenteseif@gmail.com?subject=Gest%C3%A3o%20e%20Fortalecimento%20da%20Marca">Pedir informações</a></div>
+              </article>
+
+              <article class="activity-card">
+                <div class="activity-card__media"><img src="assets/optimized/Projetos/tenisdemesa.webp" srcset="assets/optimized/responsive/480/tenisdemesa.webp 480w, assets/optimized/responsive/800/tenisdemesa.webp 800w, assets/optimized/responsive/1200/tenisdemesa.webp 1200w, assets/optimized/Projetos/tenisdemesa.webp 1600w" sizes="100vw" alt="Adolescentes praticando tênis de mesa" width="1600" height="738" loading="lazy"></div>
+                <div class="activity-card__body"><div class="activity-card__tags"><span class="tag">Adolescentes</span><span class="tag tag--status">Consulte disponibilidade</span></div><h3>Agilidade em Movimento</h3><p>Tênis de mesa para desenvolver agilidade, concentração, coordenação, raciocínio, disciplina e integração.</p><a class="text-link" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Consultar inscrições</a></div>
+              </article>
             </div>
-        </section>
-
-
-
-
-
-
-
-
-
-
-        <section id="blog" class="secao secao-alternativa">
-            <div class="container">
-                <div class="titulo-secao animar-scroll">
-                    <h2>Nossos projetos em Ação</h2>
-                    <p>Veja como é participar das atividades do Movimente-se.</p>
-                </div>
-                <div class="grid-conteudo">
-                    <article class="card animar-scroll">
-                        <img src="assets/Projetos/corrida0.jpg" alt="Artigo 1" class="card-imagem">
-                        <div class="card-conteudo">
-                            <h3>Passos de Resiliência</h3>
-                            <p>Focado em caminhadas e corridas para maiores de 18 anos, este projeto tem como objetivo
-                                incentivar a prática de atividade física regular, fortalecendo a saúde física, mental e
-                                emocional dos participantes por meio da resiliência e do superação de desafios.</p>
-
-                        </div>
-                    </article>
-                    <article class="card animar-scroll">
-                        <img src="assets/Projetos/idosos.jpg" alt="Artigo 2" class="card-imagem">
-                        <div class="card-conteudo">
-                            <h3>Treinamento Multicomponente para Idosos</h3>
-                            <p>Este projeto será voltado para exercícios físicos e cognitivos para a população idosa,
-                                visando promover o bem-estar físico e mental, aumentando a autonomia e a qualidade de
-                                vida dos participantes.</p>
-
-                        </div>
-                    </article>
-                    <article class="card animar-scroll">
-                        <img src="assets/Projetos/beach_tennis.jpg" alt="Artigo 3" class="card-imagem">
-                        <div class="card-conteudo">
-                            <h3>Servidores na Vibe da Areia</h3>
-                            <p>Este projeto é focado em esportes de Beach Tennis e Vôlei de Praia para servidores do
-                                campus, promovendo a socialização e a prática de exercícios físicos em um ambiente
-                                descontraído e motivador.</p>
-
-                        </div>
-                    </article>
-                    <article class="card animar-scroll">
-                        <img src="assets/Projetos/pilates.jpg" alt="Artigo 3" class="card-imagem">
-                        <div class="card-conteudo">
-                            <h3>Na Resistência da Mola</h3>
-                            <p>Destinado aos servidores do campus, esse projeto de Pilates visa melhorar a postura, a
-                                flexibilidade e o equilíbrio, promovendo o bem-estar físico e emocional, além de
-                                oferecer uma pausa saudável para a rotina de trabalho.</p>
-                        </div>
-                    </article>
-                    <article class="card animar-scroll">
-                        <img src="assets/Projetos/adolescentes.jpg" alt="Artigo 3" class="card-imagem">
-                        <div class="card-conteudo">
-                            <h3>Na Vibe da Areia</h3>
-                            <p>Destinado aos alunos do 9° ano de escolas públicas, este projeto oferece aulas de Beach
-                                Tênis, incentivando o lazer ativo e a socialização saudável, além de desenvolver
-                                habilidades motoras e emocionais.</p>
-                        </div>
-                    </article>
-                    <article class="card animar-scroll">
-                        <img src="assets/Projetos/tenisdemesa.jpeg" alt="Artigo 3" class="card-imagem">
-                        <div class="card-conteudo">
-                            <h3>Agilidade em Movimento</h3>
-                            <p>Voltado também para alunos do 9° ano de escolas públicas, este projeto oferece o
-                                aprendizado do Tênis de Mesa, estimulando a agilidade, concentração e habilidades
-                                cognitivas, além de promover a integração entre jovens de diferentes contextos.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="rodape">
-        <div class="container grid-rodape">
-            <div class="coluna-rodape">
-                <h3>Movimente-se</h3>
-                <p>Transformando vidas através do movimento desde 2025.</p>
-                <p>Entre em contato conosco: <a href="movimenteseif@gmail.com">movimenteseif@gmail.com</a></p>
-            </div>
-            <div class="coluna-rodape">
-                <h3>Siga-nos</h3>
-                <div class="redes-sociais">
-                    <!-- Facebook -->
-                    <div style="display: flex; align-items: center; gap: 6px;">
-                        <a href="#" aria-label="Facebook" style="color: #1877f2; text-decoration: none;">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <span
-                            style="font-family: Arial, sans-serif; font-size: 14px; color: #ecf0f1;">@movimentese_if</span>
-                    </div>
-
-                    <!-- Instagram -->
-                    <div style="display: flex; align-items: center; gap: 6px;">
-                        <a href="#" aria-label="Instagram"
-                            style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none;">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <span
-                            style="font-family: Arial, sans-serif; font-size: 14px; color: #ecf0f1;">@movimentese_if</span>
-                    </div>
-                </div>
-            </div>
-            <div class="coluna-rodape">
-                <h3>Novidades</h3>
-                <p>Receba dicas e novidades direto no seu e-mail!</p>
-                <form id="formulario-newsletter">
-                    <input type="email" id="email-newsletter" placeholder="Seu melhor e-mail" required>
-                    <button type="submit" class="botao-inscrever">Inscrever-se</button>
-                    <p id="feedback-newsletter" class="feedback-form"></p>
-                </form>
-            </div>
+          </section>
         </div>
-        <div class="copyright">
-            <p>&copy; 2025 Movimente-se. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+      </div>
+    </section>
 
-    <button id="toggle-tema" aria-label="Alternar tema">
-        🌙
-    </button>
+    <section class="cta-band" aria-labelledby="cta-title"><div class="container cta-band__inner"><div><h2 id="cta-title">Não encontrou uma inscrição aberta?</h2><p>Acompanhe os canais oficiais: novas turmas e oportunidades podem surgir ao longo do projeto.</p></div><div class="cta-band__actions"><a class="button button--primary" href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Ver canais oficiais</a><a class="button button--outline" href="mailto:movimenteseif@gmail.com">Tirar uma dúvida</a></div></div></section>
+  </main>
 
-    <script src="js/script.js">
-
-    </script>
+  <footer class="site-footer" id="contato"><div class="container"><div class="footer-grid"><div><h2>Movimente-se</h2><p>Extensão do IF Sudeste MG — Campus Avançado Cataguases, conectando educação, saúde, esporte e comunidade.</p></div><div><h3>Navegação</h3><ul class="footer-links"><li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="equipe.html">Equipe</a></li><li><a href="https://linktr.ee/MOVIMENTESEIF" target="_blank" rel="noopener">Links oficiais</a></li></ul></div><div class="footer-contact"><h3>Contato</h3><a href="mailto:movimenteseif@gmail.com">movimenteseif@gmail.com</a><span>Cataguases, Minas Gerais</span><span>@movimentese_if</span></div></div><div class="footer-bottom"><span>© <span data-current-year>2026</span> Movimente-se.</span><span>Projeto público, gratuito e inclusivo.</span></div></div></footer>
 </body>
-
 </html>
