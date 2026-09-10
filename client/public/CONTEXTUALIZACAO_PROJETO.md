@@ -8,7 +8,7 @@
 
 ## 1. O que é o Movimente-se
 
-O **Movimente-se** é uma iniciativa gratuita de extensão do **IF Sudeste MG — Campus Avançado Cataguases**, em Cataguases (MG). A marca reúne ações de esporte, exercício, saúde e lazer que aproximam o campus da comunidade.
+O **Movimente-se** é uma iniciativa gratuita de extensão do **IF Sudeste Campus Cataguases**, em Cataguases (MG). A marca reúne ações de esporte, exercício, saúde e lazer que aproximam o campus da comunidade.
 
 O projeto tem uma dupla finalidade:
 
@@ -194,4 +194,4 @@ Antes de aprovar uma nova página, publicação, banner ou seção, conferir:
 
 ### Síntese em uma frase
 
-O Movimente-se é a marca de extensão gratuita do IF Sudeste MG — Campus Avançado Cataguases que transforma conhecimento em experiências inclusivas de saúde, esporte e lazer, aproximando estudantes e comunidade por meio do movimento.
+O Movimente-se é a marca de extensão gratuita do IF Sudeste Campus Cataguases que transforma conhecimento em experiências inclusivas de saúde, esporte e lazer, aproximando estudantes e comunidade por meio do movimento.
