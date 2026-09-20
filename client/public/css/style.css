@@ -315,6 +315,34 @@ p { margin: 0; }
 .split__media { position: relative; }
 .split__media img { width: 100%; aspect-ratio: 4 / 5; border-radius: var(--radius-lg); object-fit: cover; }
 .split__media::after { position: absolute; z-index: -1; right: -1rem; bottom: -1rem; width: 58%; height: 42%; border-radius: var(--radius-lg); background: var(--green-100); content: ""; }
+.section--purpose { padding-block: clamp(2.5rem, 4vw, 4rem); }
+.purpose-card {
+  grid-template-columns: minmax(0, .52fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.split__media--purpose { min-width: 0; }
+.split__media--purpose::after { content: none; }
+.split__media--purpose img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  border-radius: 0;
+  object-fit: cover;
+}
+.purpose-card .split__content { padding: clamp(1.5rem, 3vw, 2.5rem); }
+.purpose-card .eyebrow { margin-bottom: .75rem; }
+.purpose-card h2 { font-size: clamp(1.75rem, 2.8vw, 2.5rem); }
+.purpose-card .split__content > p:not(.eyebrow) { margin-top: 1rem; }
+.purpose-card .pillars { gap: .75rem; margin-top: 1.25rem; }
+.purpose-card .pillar { padding: .65rem .8rem; background: var(--paper); }
 .split__content > p:not(.eyebrow) { max-width: 62ch; margin-top: 1.25rem; color: var(--muted); }
 .pillars { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; margin-top: 2rem; }
 .pillar { padding: 1rem; border-left: 3px solid var(--green-700); background: rgba(255,255,255,.72); }
@@ -553,6 +581,7 @@ p { margin: 0; }
     font-size: .8rem;
   }
   .card-grid, .team-grid, .split, .audience-grid, .commitment-grid, .footer-grid { grid-template-columns: 1fr; }
+  .split__media--purpose img { position: static; height: auto; max-height: 320px; aspect-ratio: 4 / 3; object-position: center 40%; }
   .activity-group { padding: 1rem; border-radius: 20px; }
   .activity-group__header { grid-template-columns: auto minmax(0,1fr); align-items: start; gap: .85rem; }
   .activity-group__index { width: 2.6rem; height: 2.6rem; border-radius: 12px; }
