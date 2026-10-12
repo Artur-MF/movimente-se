@@ -40,6 +40,49 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   updateThemeControls();
 
+  document.querySelectorAll("[data-video-feature]").forEach((feature) => {
+    const video = feature.querySelector("video[data-video-src]");
+    const cover = feature.querySelector("[data-video-cover]");
+    const playButton = feature.querySelector("[data-video-play]");
+    const placeholder = feature.querySelector("[data-video-placeholder]");
+    const status = feature.querySelector("[data-video-status]");
+    const source = video?.dataset.videoSrc.trim();
+    if (!source || !cover || !playButton || !status) return;
+
+    if (placeholder) placeholder.hidden = true;
+    playButton.hidden = false;
+    status.textContent = "Dê o play para conhecer o projeto.";
+
+    function showVideoError() {
+      video.pause();
+      video.hidden = true;
+      cover.hidden = false;
+      playButton.disabled = false;
+      status.textContent = "Não foi possível reproduzir o vídeo. Tente novamente.";
+    }
+
+    video.addEventListener("error", showVideoError);
+    playButton.addEventListener("click", async () => {
+      playButton.disabled = true;
+      status.textContent = "Carregando vídeo…";
+      video.hidden = false;
+      cover.hidden = true;
+      // A URL só é atribuída após o clique para evitar baixar o vídeo na entrada.
+      if (!video.getAttribute("src") || video.error) {
+        video.src = source;
+        video.load();
+      }
+      try {
+        await video.play();
+        video.focus();
+        playButton.disabled = false;
+        status.textContent = "Use os controles para pausar, ajustar o volume ou abrir em tela cheia.";
+      } catch {
+        showVideoError();
+      }
+    });
+  });
+
   const menuButton = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
   const backdrop = document.querySelector(".menu-backdrop");
