@@ -40,6 +40,49 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   updateThemeControls();
 
+  document.querySelectorAll("[data-video-feature]").forEach((feature) => {
+    const video = feature.querySelector("video[data-video-src]");
+    const cover = feature.querySelector("[data-video-cover]");
+    const playButton = feature.querySelector("[data-video-play]");
+    const placeholder = feature.querySelector("[data-video-placeholder]");
+    const status = feature.querySelector("[data-video-status]");
+    const source = video?.dataset.videoSrc.trim();
+    if (!source || !cover || !playButton || !status) return;
+
+    if (placeholder) placeholder.hidden = true;
+    playButton.hidden = false;
+    status.textContent = "Dê o play para conhecer o projeto.";
+
+    function showVideoError() {
+      video.pause();
+      video.hidden = true;
+      cover.hidden = false;
+      playButton.disabled = false;
+      status.textContent = "Não foi possível reproduzir o vídeo. Tente novamente.";
+    }
+
+    video.addEventListener("error", showVideoError);
+    playButton.addEventListener("click", async () => {
+      playButton.disabled = true;
+      status.textContent = "Carregando vídeo…";
+      video.hidden = false;
+      cover.hidden = true;
+      // A URL só é atribuída após o clique para evitar baixar o vídeo na entrada.
+      if (!video.getAttribute("src") || video.error) {
+        video.src = source;
+        video.load();
+      }
+      try {
+        await video.play();
+        video.focus();
+        playButton.disabled = false;
+        status.textContent = "Use os controles para pausar, ajustar o volume ou abrir em tela cheia.";
+      } catch {
+        showVideoError();
+      }
+    });
+  });
+
   const menuButton = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
   const backdrop = document.querySelector(".menu-backdrop");
@@ -142,6 +185,61 @@ document.addEventListener("DOMContentLoaded", () => {
       window.setTimeout(() => window.location.assign(link.href), 180);
     });
   });
+
+  const instagramDialog = document.querySelector("#instagram-contact-dialog");
+  const instagramDialogTriggers = [...document.querySelectorAll("[data-instagram-dialog]")];
+  let instagramDialogTrigger = null;
+
+  if (instagramDialog) {
+    const dialogFocusableItems = () => [...instagramDialog.querySelectorAll('a[href], button:not([disabled])')];
+
+    function openInstagramDialog(trigger) {
+      instagramDialogTrigger = trigger;
+      instagramDialog.hidden = false;
+      document.body.classList.add("dialog-open");
+      instagramDialog.querySelector("[data-dialog-close]")?.focus();
+    }
+
+    function closeInstagramDialog() {
+      instagramDialog.hidden = true;
+      document.body.classList.remove("dialog-open");
+      instagramDialogTrigger?.focus();
+      instagramDialogTrigger = null;
+    }
+
+    instagramDialogTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", (event) => {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        openInstagramDialog(trigger);
+      });
+    });
+
+    instagramDialog.addEventListener("click", (event) => {
+      if (event.target === instagramDialog || event.target.closest("[data-dialog-close]")) closeInstagramDialog();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (instagramDialog.hidden) return;
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeInstagramDialog();
+        return;
+      }
+      if (event.key !== "Tab") return;
+      const items = dialogFocusableItems();
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+  }
 
   const tabs = [...document.querySelectorAll("[role='tab'][data-team-tab]")];
   const panels = [...document.querySelectorAll("[role='tabpanel'][data-team-panel]")];
