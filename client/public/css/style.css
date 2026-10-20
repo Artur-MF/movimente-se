@@ -131,7 +131,7 @@ p { margin: 0; }
 }
 .site-nav a:hover, .site-nav a[aria-current="page"] { background: var(--green-100); color: var(--accent-ink); }
 .header-cta { flex: 0 0 auto; }
-.header-sponsor { white-space: nowrap; }
+.header-supporter { white-space: nowrap; }
 .mobile-cta-item, .mobile-cta, .menu-toggle, .menu-backdrop { display: none; }
 
 .theme-toggle {
@@ -346,24 +346,24 @@ p { margin: 0; }
 .step h3 { margin-bottom: .55rem; }
 .step p { color: var(--muted); }
 
-/* Sponsorship */
-.sponsorship__card {
+/* Supporters */
+.supporter__card {
   display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
   gap: clamp(2rem, 5vw, 4rem); align-items: center;
   padding: clamp(1.5rem, 4vw, 3.5rem); border: 1px solid var(--line);
   border-radius: var(--radius-lg); background: var(--paper);
 }
-.sponsorship__intro h2 { max-width: 14ch; margin-bottom: 1.25rem; }
-.sponsorship__intro > p:not(.eyebrow) { max-width: 58ch; color: var(--muted); }
-.sponsorship__intro > .button { margin-block: 1.75rem 1rem; }
-.sponsorship__intro .sponsorship__note { max-width: 48ch; font-size: .9rem; }
-.sponsorship__options { padding: clamp(1.25rem, 3vw, 2rem); border-radius: 20px; background: var(--green-100); }
-.sponsorship__options h3 { font-size: 1.35rem; }
-.sponsorship__options ul { display: grid; gap: 1.25rem; padding: 0; margin: 1.75rem 0; list-style: none; }
-.sponsorship__options li { display: flex; align-items: flex-start; gap: 1rem; }
-.sponsorship__options li > span { display: grid; flex: 0 0 2rem; height: 2rem; place-items: center; border: 1px solid var(--accent-ink); border-radius: 50%; color: var(--accent-ink); font-size: .75rem; font-weight: 800; }
-.sponsorship__options p { margin-top: .25rem; color: var(--muted); font-size: .92rem; }
-.sponsorship__options > p { padding-top: 1rem; border-top: 1px solid var(--line); }
+.supporter__intro h2 { max-width: 14ch; margin-bottom: 1.25rem; }
+.supporter__intro > p:not(.eyebrow) { max-width: 58ch; color: var(--muted); }
+.supporter__intro > .button { margin-block: 1.75rem 1rem; }
+.supporter__intro .supporter__note { max-width: 48ch; font-size: .9rem; }
+.supporter__options { padding: clamp(1.25rem, 3vw, 2rem); border-radius: 20px; background: var(--green-100); }
+.supporter__options h3 { font-size: 1.35rem; }
+.supporter__options ul { display: grid; gap: 1.25rem; padding: 0; margin: 1.75rem 0; list-style: none; }
+.supporter__options li { display: flex; align-items: flex-start; gap: 1rem; }
+.supporter__options li > span { display: grid; flex: 0 0 2rem; height: 2rem; place-items: center; border: 1px solid var(--accent-ink); border-radius: 50%; color: var(--accent-ink); font-size: .75rem; font-weight: 800; }
+.supporter__options p { margin-top: .25rem; color: var(--muted); font-size: .92rem; }
+.supporter__options > p { padding-top: 1rem; border-top: 1px solid var(--line); }
 
 /* Institutional */
 .split { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); align-items: center; gap: clamp(2rem, 7vw, 6rem); }
@@ -571,7 +571,7 @@ p { margin: 0; }
 }
 
 @media (max-width: 1180px) {
-  .header-cta:not(.header-sponsor) { display: none; }
+  .header-cta:not(.header-supporter) { display: none; }
   .section-heading--activities {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -607,7 +607,7 @@ p { margin: 0; }
   .site-nav.is-open a { width: 100%; padding: .8rem 1rem; font-size: 1.05rem; }
   .site-nav .mobile-cta-item { display: block; width: 100%; }
   .site-nav .mobile-cta { display: inline-flex; justify-content: center; margin-top: .8rem; background: var(--green-700); color: #fff; }
-  .site-nav .mobile-cta--sponsor { border: 1px solid var(--green-700); background: transparent; color: var(--accent-ink); }
+  .site-nav .mobile-cta--supporter { border: 1px solid var(--green-700); background: transparent; color: var(--accent-ink); }
   .menu-backdrop.is-open { position: fixed; z-index: 999; inset: 0; display: block; border: 0; background: rgba(7,28,22,.52); }
   .section-heading { grid-template-columns: 1fr; gap: 1rem; }
   .card-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -622,8 +622,8 @@ p { margin: 0; }
 }
 
 @media (max-width: 680px) {
-  .sponsorship__card { grid-template-columns: 1fr; }
-  .sponsorship__intro > .button { width: 100%; }
+  .supporter__card { grid-template-columns: 1fr; }
+  .supporter__intro > .button { width: 100%; }
   :root { --section: clamp(3rem, 13vw, 4rem); }
   .container { width: min(calc(100% - 2rem), var(--container)); }
   .video-section { padding-block: 2rem; }
